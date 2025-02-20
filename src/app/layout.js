@@ -1,13 +1,15 @@
-import { Geist, Geist_Mono } from "next/font/google";
+import Nav from "@/components/nav";
+import { Playfair_Display, Montserrat } from "next/font/google";
+import HeroUIWrapper from "../wrappers/herouiwrapper";
 import "./globals.css";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
+const playfairDisplay = Playfair_Display({
+  variable: "--font-playfair-display",
   subsets: ["latin"],
 });
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
+const montSerrat = Montserrat({
+  variable: "--font-montserrat",
   subsets: ["latin"],
 });
 
@@ -20,9 +22,15 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${playfairDisplay.variable} ${montSerrat.variable} antialiased`}
       >
-        {children}
+
+        <HeroUIWrapper>
+          <Nav></Nav>
+          <main>
+            {children}
+          </main>
+        </HeroUIWrapper>
       </body>
     </html>
   );
