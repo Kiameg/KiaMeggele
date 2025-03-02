@@ -3,6 +3,8 @@ import { Playfair_Display, Montserrat } from "next/font/google";
 import HeroUIWrapper from "../wrappers/herouiwrapper";
 import "./globals.css";
 
+
+
 const playfairDisplay = Playfair_Display({
   variable: "--font-playfair-display",
   subsets: ["latin"],
