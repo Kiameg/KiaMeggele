@@ -28,7 +28,6 @@ export default function RootLayout({ children }) {
       >
 
         <HeroUIWrapper>
-          <Nav></Nav>
           <main>
             {children}
           </main>
