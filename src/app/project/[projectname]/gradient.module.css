@@ -1,0 +1,28 @@
+.gradient {
+  background: --background;
+  background: linear-gradient(0deg, rgba(230, 228, 232, 1) 0%, rgba(242, 241, 236, 1) 30%);
+}
+
+.gradientReverse {
+  background: --background;
+  background: linear-gradient(180deg, rgba(230, 228, 232, 1) 0%, rgba(242, 241, 236, 1) 70%);
+}
+
+.solutionDescription p {
+  font-size: 16px;
+}
+
+.solutionDescription ul {
+  padding-top: 10px;
+  padding-left: 30px;
+  list-style-type: disc;
+}
+
+.solutionDescription li {
+  margin-bottom: 5px;
+}
+
+.solutionDescription br {
+  display: block;
+  margin-bottom: 10px;
+}

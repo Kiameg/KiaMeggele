@@ -1,5 +1,5 @@
-import Image from "next/image";
-import Link from "next/link";
+import Image from 'next/image';
+import Link from 'next/link';
 export default function Overview() {
   return (
     <>
@@ -7,22 +7,34 @@ export default function Overview() {
 
       <section className="grid grid-cols-3 justify-center ">
         <div>
-          <Link href={`/jouxli`}><Image src="/jouxli_cover.png" width={200} height={200} alt="Jouxli projekt" /></Link>
+          <Link href={`/jouxli`}>
+            <Image src="/jouxli_cover.png" width={200} height={200} alt="Jouxli projekt" />
+          </Link>
         </div>
         <div>
-          <Link href={`/tapnplan`}><Image src="/meal_cover.png" width={200} height={200} alt="Mealplan projekt" /></Link>
+          <Link href={`/tapnplan`}>
+            <Image src="/meal_cover.png" width={200} height={200} alt="Mealplan projekt" />
+          </Link>
         </div>
         <div>
-          <Link href={`/superkilen`}><Image src="/Superkilen_cover.png" width={200} height={200} alt="Superkilen projekt" /></Link>
+          <Link href={`/superkilen`}>
+            <Image src="/Superkilen_cover.png" width={200} height={200} alt="Superkilen projekt" />
+          </Link>
         </div>
         <div>
-          <Link href={`/wonderworks`}><Image src="/wonderworks_cover.png" width={200} height={200} alt="Wonderworks firma" /></Link>
+          <Link href={`/wonderworks`}>
+            <Image src="/wonderworks_cover.png" width={200} height={200} alt="Wonderworks firma" />
+          </Link>
         </div>
         <div>
-          <Link href={`/uldahl`}><Image src="/Uldahl_cover.png" width={200} height={200} alt="Uldahl projekt" /></Link>
+          <Link href={`/uldahl`}>
+            <Image src="/Uldahl_cover.png" width={200} height={200} alt="Uldahl projekt" />
+          </Link>
         </div>
         <div>
-          <Link href={`/wonderfulcph`}><Image src="/wonderful_cph.png" width={200} height={200} alt="A city for all projekt" /></Link>
+          <Link href={`/wonderfulcph`}>
+            <Image src="/wonderful_cph.png" width={200} height={200} alt="A city for all projekt" />
+          </Link>
         </div>
       </section>
     </>
