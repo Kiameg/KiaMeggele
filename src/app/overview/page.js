@@ -1,27 +1,28 @@
 import Image from "next/image";
+import Link from "next/link";
 export default function Overview() {
   return (
     <>
       <h1>All projects</h1>
 
-      <section>
+      <section className="grid grid-cols-3 justify-center ">
         <div>
-          <Image src="/jouxli_cover.png" width={200} height={200} alt="Jouxli projekt" />
+          <Link href={`/jouxli`}><Image src="/jouxli_cover.png" width={200} height={200} alt="Jouxli projekt" /></Link>
         </div>
         <div>
-          <Image src="/meal_cover.png" width={200} height={200} alt="Mealplan projekt" />
+          <Link href={`/tapnplan`}><Image src="/meal_cover.png" width={200} height={200} alt="Mealplan projekt" /></Link>
         </div>
         <div>
-          <Image src="/Superkilen_cover.png" width={200} height={200} alt="Superkilen projekt" />
+          <Link href={`/superkilen`}><Image src="/Superkilen_cover.png" width={200} height={200} alt="Superkilen projekt" /></Link>
         </div>
         <div>
-          <Image src="/wonderworks_cover.png" width={200} height={200} alt="Wonderworks firma" />
+          <Link href={`/wonderworks`}><Image src="/wonderworks_cover.png" width={200} height={200} alt="Wonderworks firma" /></Link>
         </div>
         <div>
-          <Image src="/Uldahl_cover.png" width={200} height={200} alt="Uldahl projekt" />
+          <Link href={`/uldahl`}><Image src="/Uldahl_cover.png" width={200} height={200} alt="Uldahl projekt" /></Link>
         </div>
         <div>
-          <Image src="/wonderful_cph.png" width={200} height={200} alt="A city for all projekt" />
+          <Link href={`/wonderfulcph`}><Image src="/wonderful_cph.png" width={200} height={200} alt="A city for all projekt" /></Link>
         </div>
       </section>
     </>
