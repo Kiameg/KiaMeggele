@@ -1,9 +1,8 @@
-import Image from "next/image";
-import Link from "next/link";
+import Image from 'next/image';
+import Link from 'next/link';
 export default function Overview() {
   return (
     <>
-
       <h1 className="text-center mb-20 mt-20 text-3xl">All projects</h1>
 
       <section className="grid grid-cols-[450px,450px,450px] grid-rows-[420px,420px] items-center justify-items-center justify-center gap-4 mb-20 ">
