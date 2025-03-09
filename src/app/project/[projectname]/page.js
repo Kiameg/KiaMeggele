@@ -34,34 +34,7 @@ export default async function Projectview({ params }) {
         `,
       solutionImage: '/jouxli_cover.png',
     },
-    tapnplan: {
-      title: 'Tapnplan',
-      description:
-        'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
-      description2:
-        'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
-      problem:
-        'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
-      heroImage: '/meal_cover.png',
-      appImage1: '/tapnplan_app1.png',
-      appImage2: '/tapnplan_app2.png',
-      research1: 'lorem ipsum dolor sit amet lorem ipsum dolor sit amet',
-      research2: 'lorem ipsum dolor sit amet lorem ipsum dolor sit amet',
-      research3: 'lorem ipsum dolor sit amet lorem ipsum dolor sit amet',
-      research4: 'lorem ipsum dolor sit amet lorem ipsum dolor sit amet',
-      solutionDescriptionHtml: `<p>lorem ipsum dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit amet</p>
-        <br />
-        <p>lorem ipsum dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit amet</p>
-        <br />
-        <p>We did this by: </p>
-        <ul>
-          <li>lorem ipsum dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit amet</li>
-          <li>lorem ipsum dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit amet</li>
-          <li>lorem ipsum dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit amet</li>
-        </ul>
-        `,
-      solutionImage: '/tapnplan_solution.png',
-    },
+
     superkilen: {
       title: 'Superkilen',
       description:
