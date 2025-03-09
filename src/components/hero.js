@@ -1,10 +1,11 @@
 import Image from "next/image";
 import Link from "next/link";
 
-export default function Gallery() {
+export default function Hero() {
   return (
-    <section className="relative w-full min-h-[80vh] md:min-h-screen">
-      <section className="h-[700px] py-8 max-w-[1000px] mx-auto relative z-10 justify-center align-center grid grid-cols-[1fr,1.8fr,1fr,1fr] grid-rows-3 gap-4">
+    <>
+
+      <section className="h-[700px] py-8 max-w-[1000px] mx-auto relative z-10 justify-center align-center grid grid-cols-[1fr,1.8fr,1fr,1fr] grid-rows-3 gap-4 drop-shadow-md">
 
         <div className="bg-white rounded-2xl flex justify-center items-center">logo</div>
 
@@ -51,6 +52,6 @@ export default function Gallery() {
         </div>
 
       </section>
-    </section>
+    </>
   );
 }
