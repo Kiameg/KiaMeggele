@@ -23,17 +23,17 @@ export default function Header() {
       </NavbarBrand>
       <NavbarContent className="hidden sm:flex gap-10" justify="center">
         <NavbarItem>
-          <Link color="black" className="hover:text-[#ff8cb8]" href="#">
+          <Link color="black" className="hover:text-[#ff8cb8]" href="/overview">
             Projects
           </Link>
         </NavbarItem>
         <NavbarItem>
-          <Link color="black" className="hover:text-[#ff8cb8]" href="#">
+          <Link color="black" className="hover:text-[#ff8cb8]" href="/about">
             About
           </Link>
         </NavbarItem>
         <NavbarItem>
-          <Link color="black" className="hover:text-[#ff8cb8]" href="#">
+          <Link color="black" className="hover:text-[#ff8cb8]" href="/contact">
             Contact
           </Link>
         </NavbarItem>

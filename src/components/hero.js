@@ -11,11 +11,13 @@ export default function Hero() {
 
         {/* Image with Hover Effect */}
         <div className="relative bg-white rounded-2xl flex justify-center items-center overflow-hidden cursor-pointer">
-          <Image src="/wonderworks_cover.png" width={500} height={700} className="object-cover rounded-2xl h-full" alt="Wonderworks" />
-          <div className="absolute inset-0 bg-white bg-opacity-0 flex flex-col justify-center items-center text-black text-xl opacity-0 transition-all duration-300 hover:bg-opacity-50 hover:opacity-100">
-            <h2 className="text-black text-3xl">Wonderworks</h2>
-            <p className="underline mt-2">See more</p>
-          </div>
+          <Link href="/project/wonderworks">
+            <Image src="/wonderworks_cover.png" width={500} height={700} className="object-cover rounded-2xl h-full" alt="Wonderworks" />
+            <div className="absolute inset-0 bg-white bg-opacity-0 flex flex-col justify-center items-center text-black text-xl opacity-0 transition-all duration-300 hover:bg-opacity-50 hover:opacity-100">
+              <h2 className="text-black text-3xl">Wonderworks</h2>
+              <p className="underline mt-2">See more</p>
+            </div>
+          </Link>
         </div>
 
         <div className="bg-white rounded-2xl col-span-2 flex justify-center items-center">
@@ -24,31 +26,37 @@ export default function Hero() {
 
         {/* Image with Hover Effect */}
         <div className="relative bg-white rounded-2xl row-span-2 h-full flex justify-center items-center overflow-hidden cursor-pointer">
+
           <Image src="/me2.jpeg" width={500} height={700} className="object-cover rounded-2xl h-full" alt="Photo of me" />
           <div className="absolute inset-0 bg-white bg-opacity-0 flex justify-center items-center text-black text-xl opacity-0 transition-all duration-300 hover:bg-opacity-50 hover:opacity-100">
-            <h2 className="underline mt-2 text-3xl">About Me</h2>
+            <h2 className="underline mt-2 text-3xl"><Link href="/about">About Me </Link></h2>
           </div>
+
         </div>
 
         {/* Image with Hover Effect */}
         <div className="relative bg-white rounded-2xl flex justify-center items-center overflow-hidden cursor-pointer">
-          <Image src="/wonderful_cph.png" width={500} height={700} className="object-cover rounded-2xl h-full" alt="Wonderful CPH Case" />
-          <div className="absolute inset-0 bg-white bg-opacity-0 flex flex-col justify-center items-center opacity-0 transition-all duration-300 hover:bg-opacity-50 hover:opacity-100">
-            <h2 className="text-black text-3xl">A City For All</h2>
-            <p className="underline mt-2">See more</p>
-          </div>
+          <Link href="/project/wonderfulcph">
+            <Image src="/wonderful_cph.png" width={500} height={700} className="object-cover rounded-2xl h-full" alt="Wonderful CPH Case" />
+            <div className="absolute inset-0 bg-white bg-opacity-0 flex flex-col justify-center items-center opacity-0 transition-all duration-300 hover:bg-opacity-50 hover:opacity-100">
+              <h2 className="text-black text-3xl">A City For All</h2>
+              <p className="underline mt-2">See more</p>
+            </div>
+          </Link>
         </div>
 
-        <div className="bg-white rounded-2xl row-span-2 flex justify-center items-center">Contact</div>
-        <div className="bg-white rounded-2xl row-span-2 flex justify-center items-center">CV</div>
+        <div className="bg-white rounded-2xl row-span-2 flex justify-center items-center"> <Link href="/contact">Contact</Link></div>
+        <div className="bg-white rounded-2xl row-span-2 flex justify-center items-center"> <Link href="/cv">CV</Link></div>
 
         {/* Image with Hover Effect */}
         <div className="relative bg-white rounded-2xl flex justify-center items-center overflow-hidden cursor-pointer">
-          <Image src="/jouxli_cover.png" width={500} height={700} className="object-cover rounded-2xl h-full" alt="Jouxli Case" />
-          <div className="absolute inset-0 bg-white bg-opacity-0 flex flex-col justify-center items-center opacity-0 transition-all duration-300 hover:bg-opacity-50 hover:opacity-100">
-            <h2 className="text-black text-3xl">jOUXli</h2>
-            <p className="underline mt-2">See more</p>
-          </div>
+          <Link href="/project/jouxli">
+            <Image src="/jouxli_cover.png" width={500} height={700} className="object-cover rounded-2xl h-full" alt="Jouxli Case" />
+            <div className="absolute inset-0 bg-white bg-opacity-0 flex flex-col justify-center items-center opacity-0 transition-all duration-300 hover:bg-opacity-50 hover:opacity-100">
+              <h2 className="text-black text-3xl">jOUXli</h2>
+              <p className="underline mt-2">See more</p>
+            </div>
+          </Link>
         </div>
 
       </section>
