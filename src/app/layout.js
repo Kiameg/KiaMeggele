@@ -1,3 +1,4 @@
+import Header from "@/components/header";
 import { Playfair_Display, Montserrat } from "next/font/google";
 import HeroUIWrapper from "../wrappers/herouiwrapper";
 import "./globals.css";
@@ -27,6 +28,8 @@ export default function RootLayout({ children }) {
       >
 
         <HeroUIWrapper>
+
+          <Header />
           <main>
             {children}
           </main>
