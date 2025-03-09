@@ -233,11 +233,12 @@ export default async function Projectview({ params }) {
       </section>
 
       {/* Problem area */}
-      <section id="problem-area" className="max-w-6xl mx-auto pb-24">
+      <section id="problem-area" className="md:max-w-6xl md:mx-auto md:pb-24 md:pt-0 py-12 px-4">
         {/* Problem area title */}
         <h2 className="text-4xl font-light pb-4">Problem area</h2>
-
-        <div className="grid grid-cols-2">
+        {/* Problem area grid */}
+        <div className="md:grid md:grid-cols-2 flex flex-col gap-8">
+          {/* Problem area description */}
           <div className="space-y-6 border-t border-black pt-4">
             {/* Description 1*/}
             <p className="">{PROJECTSDATA[projectname]?.description}</p>
@@ -248,8 +249,8 @@ export default async function Projectview({ params }) {
               <p className="text-center font-semibold">{PROJECTSDATA[projectname]?.problem}</p>
             </div>
           </div>
-
-          <div className="grid grid-cols-[150px_150px] gap-8 justify-items-center justify-self-end">
+          {/* App images */}
+          <div className="md:grid md:grid-cols-[150px_150px] md:gap-8 md:justify-items-center md:justify-self-end flex justify-around">
             {/* App image 1 */}
             <Image
               src={PROJECTSDATA[projectname]?.appImage1}
@@ -264,35 +265,35 @@ export default async function Projectview({ params }) {
               alt="Wonderful Copenhagen App Screenshot 2"
               width={150}
               height={320}
-              className="object-contain max-h-80 self-end"
+              className="object-contain max-h-80 md:self-end"
             />
           </div>
         </div>
       </section>
 
       {/* Research */}
-      <section id="research" className="max-w-6xl mx-auto pt-48">
+      <section id="research" className="md:max-w-6xl md:mx-auto md:pt-48 md:pb-0 pt-24 pb-12 px-4">
         {/* Research title */}
-        <h3 className="text-4xl font-light pb-4">Insight from research</h3>
+        <h3 className="text-4xl font-light pb-4 text-center">Insight from research</h3>
         {/* Research grid */}
-        <div className="grid grid-cols-2 gap-y-32 items-center justify-items-center">
+        <div className="grid md:grid-cols-2 grid-cols-1 md:gap-y-32 gap-y-10 gap-x-4 items-center justify-items-center pt-8">
           {/* Research 1 */}
-          <div className="flex flex-col gap-2 items-center justify-center text-center">
+          <div className="flex flex-col gap-2 text-center h-full">
             <h3 className="text-6xl font-bold">1</h3>
             <p className="max-w-96">{PROJECTSDATA[projectname]?.research1}</p>
           </div>
           {/* Research 2 */}
-          <div className="flex flex-col gap-4 items-center justify-center text-center">
+          <div className="flex flex-col gap-2 text-center h-full">
             <h3 className="text-6xl font-bold">2</h3>
             <p className="max-w-96">{PROJECTSDATA[projectname]?.research2}</p>
           </div>
           {/* Research 3 */}
-          <div className="flex flex-col gap-4 items-center justify-center text-center">
+          <div className="flex flex-col gap-2 text-center h-full">
             <h3 className="text-6xl font-bold">3</h3>
             <p className="max-w-96">{PROJECTSDATA[projectname]?.research3}</p>
           </div>
           {/* Research 4 */}
-          <div className="flex flex-col gap-4 items-center justify-center text-center">
+          <div className="flex flex-col gap-2 text-center h-full">
             <h3 className="text-6xl font-bold">4</h3>
             <p className="max-w-96">{PROJECTSDATA[projectname]?.research4}</p>
           </div>
@@ -312,10 +313,11 @@ export default async function Projectview({ params }) {
 
       {/* Solution */}
       <div className={`${styles.gradientReverse}`}>
-        <section id="solution" className="max-w-6xl mx-auto pb-24">
+        <section id="solution" className="md:max-w-6xl md:mx-auto pb-24 md:pt-0 pt-12 px-4">
           {/* Solution title */}
           <h3 className="text-4xl font-light pb-4">Solution</h3>
-          <div className="grid grid-cols-2 gap-8">
+          {/* Solution grid */}
+          <div className="md:grid md:grid-cols-2 md:gap-8 flex flex-col gap-12">
             {/* Solution description */}
             <div className={`${styles.solutionDescription}`}>
               <div
