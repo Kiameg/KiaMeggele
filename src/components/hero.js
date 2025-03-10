@@ -20,8 +20,14 @@ export default function Hero() {
           </Link>
         </div>
 
-        <div className="bg-white rounded-2xl col-span-2 flex justify-center items-center">
-          <Link href="/overview">All projects</Link>
+        <div className=" relative bg-white rounded-2xl col-span-2 flex justify-center items-center overflow-hidden cursor-pointer">
+          <Link href="/project/superkilen">
+            <Image src="/superkilen_cover.png" width={500} height={700} className="object-cover rounded-2xl h-full" alt="Superkilen Case" />
+            <div className="absolute inset-0 bg-white bg-opacity-0 flex flex-col justify-center items-center opacity-0 transition-all duration-300 hover:bg-opacity-50 hover:opacity-100">
+              <h2 className="text-black text-3xl">Superkilen</h2>
+              <p className="underline mt-2">See more</p>
+            </div>
+          </Link>
         </div>
 
         {/* Image with Hover Effect */}
@@ -37,9 +43,9 @@ export default function Hero() {
         {/* Image with Hover Effect */}
         <div className="relative bg-white rounded-2xl flex justify-center items-center overflow-hidden cursor-pointer">
           <Link href="/project/wonderfulcph">
-            <Image src="/wonderful_cph.png" width={500} height={700} className="object-cover rounded-2xl h-full" alt="Wonderful CPH Case" />
+            <Image src="/acityforall_cover.webp" width={500} height={700} className="object-cover rounded-2xl h-full" alt="Wonderful CPH Case" />
             <div className="absolute inset-0 bg-white bg-opacity-0 flex flex-col justify-center items-center opacity-0 transition-all duration-300 hover:bg-opacity-50 hover:opacity-100">
-              <h2 className="text-black text-3xl">A City For All</h2>
+              <h2 className="text-black text-3xl">Wonderful CPH</h2>
               <p className="underline mt-2">See more</p>
             </div>
           </Link>

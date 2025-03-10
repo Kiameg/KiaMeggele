@@ -23,8 +23,8 @@ export default function Header() {
       </NavbarBrand>
       <NavbarContent className="hidden sm:flex gap-10" justify="center">
         <NavbarItem>
-          <Link color="black" className="hover:text-[#ff8cb8]" href="/overview">
-            Projects
+          <Link color="black" className="hover:text-[#ff8cb8]" href="/cv">
+            CV
           </Link>
         </NavbarItem>
         <NavbarItem>
