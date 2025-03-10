@@ -1,9 +1,14 @@
+"use client"
+
 import Image from "next/image";
 import Link from "next/link";
+import { Chip } from "@heroui/react";
+
+
 export default function CV() {
   return (
     <>
-      <section className="flex flex-col justify-center max-w-[1200px] mx-auto">
+      <section className="flex flex-col justify-center max-w-[1000px] mx-auto mt-20">
         <div className="flex justify-between items-center w-full">
           <h1 className="text-4xl">Kia Meggele</h1>
           <div className="w-40 h-40 overflow-hidden rounded-full">
@@ -16,13 +21,13 @@ export default function CV() {
             />
           </div>
         </div>
-        <section className="grid grid-cols-2 mt-10 gap-10">
+        <section className="grid grid-cols-2 mt-10 gap-10 ">
           <h1 className="text-3xl">Education</h1>
-          <h1 className="text-3xl">Experience</h1>
-          <div className="education">
+          <h1 className="text-3xl pl-14">Experience</h1>
+          <div className="education pr-14 ">
             <h2 className="text-xl">Copenhagen School of Design and Technology</h2>
             <div className="flex justify-between text-l mt-5">
-              <p>Bachelor of Digital Concept Development</p>
+              <p>BA in Digital Concept Development</p>
               <p>2024 - Now</p>
             </div>
             <div className="flex justify-between text-l mt-5">
@@ -44,8 +49,8 @@ export default function CV() {
               </div>
             </div>
           </div>
-          <div className="experience">
-            <h2 className="text-xl">Tutor</h2>
+          <div className="experience pl-14">
+            <h2 className="text-xl">Tutor at KEA</h2>
             <div className="flex justify-between text-l mt-2">
               <p>Multimediadesign tutor</p>
               <p>2024 - Now</p>
@@ -70,16 +75,41 @@ export default function CV() {
             </div>
           </div>
         </section>
-        <h1>Familiarity with</h1>
-        <p>UX Research</p>
-        <p>Concept Development</p>
-        <p>UI & UX Design</p>
-        <p>Design Thinking</p>
-        <p>Webdesign</p>
-        <p>Marketing</p>
-        <p>Frontend Development</p>
-        <p>Branding</p>
+
+        <div className="text-3xl text-center mt-20">
+          <h1>Experience with</h1>
+          <Chip
+            classNames={{ base: "bg-gradient-to-br from-indigo-500 to-pink-500 border-small border-white/50 shadow-pink-500/30", content: "drop-shadow shadow-black text-white", }} variant="shadow">
+            UX Research
+          </Chip>
+          <Chip
+            classNames={{ base: "bg-gradient-to-br from-indigo-500 to-pink-500 border-small border-white/50 shadow-pink-500/30", content: "drop-shadow shadow-black text-white", }} variant="shadow">
+            Concept Development
+          </Chip>
+          <Chip
+            classNames={{ base: "bg-gradient-to-br from-indigo-500 to-pink-500 border-small border-white/50 shadow-pink-500/30", content: "drop-shadow shadow-black text-white", }} variant="shadow">
+            UI & UX Design
+          </Chip>
+          <Chip
+            classNames={{ base: "bg-gradient-to-br from-indigo-500 to-pink-500 border-small border-white/50 shadow-pink-500/30", content: "drop-shadow shadow-black text-white", }} variant="shadow">
+            Design Thinking
+          </Chip>
+          <Chip
+            classNames={{ base: "bg-gradient-to-br from-indigo-500 to-pink-500 border-small border-white/50 shadow-pink-500/30", content: "drop-shadow shadow-black text-white", }} variant="shadow">
+            Webdesign
+          </Chip>
+          <Chip
+            classNames={{ base: "bg-gradient-to-br from-indigo-500 to-pink-500 border-small border-white/50 shadow-pink-500/30", content: "drop-shadow shadow-black text-white", }} variant="shadow">
+            Marketing
+          </Chip>
+          <Chip
+            classNames={{ base: "bg-gradient-to-br from-indigo-500 to-pink-500 border-small border-white/50 shadow-pink-500/30", content: "drop-shadow shadow-black text-white", }} variant="shadow">
+            Frontend Development
+          </Chip>
+        </div>
+
       </section>
+
     </>
   );
 }
