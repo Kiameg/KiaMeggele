@@ -1,15 +1,95 @@
+"use client";
 import Image from "next/image";
 import Link from "next/link";
+import styles from '@/styles/gradient.module.css';
+import { TypewriterEffect, TypewriterEffectSmooth } from "./ui/typewriter-effect";
+import { FocusCards } from "./ui/focus-cards";
 
 export default function Hero() {
+  const cards = [
+    {
+      title: "jOUXli",
+      src: "/jouxli_cover.png",
+      href: "/project/jouxli"
+    },
+    {
+      title: "Wonderful CPH",
+      src: "/acityforall_cover.webp",
+      href: "/project/wonderfulcph"
+    },
+    {
+      title: "Superkilen",
+      src: "/superkilen_cover.png",
+      href: "/project/superkilen"
+    },
+    {
+      title: "Wonderworks",
+      src: "/wonderworks_cover.png",
+      href: "/project/wonderworks"
+    },
+  ];
+
+  const words = [
+    {
+      text: "Passionate",
+    },
+    {
+      text: "&",
+    },
+    {
+      text: "Creative",
+    },
+    {
+      text: "Concept Developer",
+      className: "text-[#ff8cb8]",
+    },
+    {
+      text: "Student",
+
+    },
+  ];
+
   return (
     <>
 
+      <section className={`${styles.gradient}`}>
+        <div className="flex flex-col text-center pt-40 p-20">
+          <h1 className="text-5xl pb-5">Kia Meggele</h1>
+          <TypewriterEffect words={words} />
+        </div>
+      </section>
+      <section className="z-0">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+          <path
+            fill="#DFCCDB"
+            fillOpacity="1"
+            d="M0,128L60,144C120,160,240,192,360,186.7C480,181,600,139,720,133.3C840,128,960,160,1080,176C1200,192,1320,192,1380,192L1440,192L1440,0L1380,0C1320,0,1200,0,1080,0C960,0,840,0,720,0C600,0,480,0,360,0C240,0,120,0,60,0L0,0Z"
+          ></path>
+        </svg>
+      </section>
+      <div className="flex flex-col relative z-10 mb-40">
+        <h2 className="text-center mb-10">Check out my projects</h2>
+        <FocusCards cards={cards} />;
+      </div>
+
+      <section>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+          <path
+            fill="#DFCCDB"
+            fillOpacity="1"
+            d="M0,128L60,144C120,160,240,192,360,186.7C480,181,600,139,720,133.3C840,128,960,160,1080,176C1200,192,1320,192,1380,192L1440,192L1440,320L1380,320C1320,320,1200,320,1080,320C960,320,840,320,720,320C600,320,480,320,360,320C240,320,120,320,60,320L0,320Z"
+          ></path>
+        </svg>
+      </section>
+    </>
+
+  );
+}
+{/* 
       <section className="h-[700px] py-8 max-w-[1000px] mx-auto relative z-10 justify-center align-center grid grid-cols-[1fr,1.8fr,1fr,1fr] grid-rows-3 gap-4 drop-shadow-md">
 
         <div className="bg-white rounded-2xl flex justify-center items-center">logo</div>
 
-        {/* Image with Hover Effect */}
         <div className="relative bg-white rounded-2xl flex justify-center items-center overflow-hidden cursor-pointer">
           <Link href="/project/wonderworks">
             <Image src="/wonderworks_cover.png" width={500} height={700} className="object-cover rounded-2xl h-full" alt="Wonderworks" />
@@ -30,7 +110,6 @@ export default function Hero() {
           </Link>
         </div>
 
-        {/* Image with Hover Effect */}
         <div className="relative bg-white rounded-2xl row-span-2 h-full flex justify-center items-center overflow-hidden cursor-pointer">
 
           <Image src="/me2.jpeg" width={500} height={700} className="object-cover rounded-2xl h-full" alt="Photo of me" />
@@ -40,7 +119,6 @@ export default function Hero() {
 
         </div>
 
-        {/* Image with Hover Effect */}
         <div className="relative bg-white rounded-2xl flex justify-center items-center overflow-hidden cursor-pointer">
           <Link href="/project/wonderfulcph">
             <Image src="/acityforall_cover.webp" width={500} height={700} className="object-cover rounded-2xl h-full" alt="Wonderful CPH Case" />
@@ -54,7 +132,6 @@ export default function Hero() {
         <div className="bg-white rounded-2xl row-span-2 flex justify-center items-center"> <Link href="/contact">Contact</Link></div>
         <div className="bg-white rounded-2xl row-span-2 flex justify-center items-center"> <Link href="/cv">CV</Link></div>
 
-        {/* Image with Hover Effect */}
         <div className="relative bg-white rounded-2xl flex justify-center items-center overflow-hidden cursor-pointer">
           <Link href="/project/jouxli">
             <Image src="/jouxli_cover.png" width={500} height={700} className="object-cover rounded-2xl h-full" alt="Jouxli Case" />
@@ -66,6 +143,5 @@ export default function Hero() {
         </div>
 
       </section>
-    </>
-  );
-}
+      */}
+

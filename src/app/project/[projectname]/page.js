@@ -1,5 +1,5 @@
 import Image from 'next/image';
-import styles from './gradient.module.css';
+import styles from '@/styles/gradient.module.css';
 import NotFound from '@/app/not-found';
 import DOMPurify from 'isomorphic-dompurify';
 
@@ -198,7 +198,7 @@ export default async function Projectview({ params }) {
       <section>
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
           <path
-            fill="#e6e4e8"
+            fill="#DFCCDB"
             fillOpacity="1"
             d="M0,128L60,144C120,160,240,192,360,186.7C480,181,600,139,720,133.3C840,128,960,160,1080,176C1200,192,1320,192,1380,192L1440,192L1440,0L1380,0C1320,0,1200,0,1080,0C960,0,840,0,720,0C600,0,480,0,360,0C240,0,120,0,60,0L0,0Z"
           ></path>
@@ -277,7 +277,7 @@ export default async function Projectview({ params }) {
       <section>
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
           <path
-            fill="#e6e4e8"
+            fill="#DFCCDB"
             fillOpacity="1"
             d="M0,128L60,144C120,160,240,192,360,186.7C480,181,600,139,720,133.3C840,128,960,160,1080,176C1200,192,1320,192,1380,192L1440,192L1440,320L1380,320C1320,320,1200,320,1080,320C960,320,840,320,720,320C600,320,480,320,360,320C240,320,120,320,60,320L0,320Z"
           ></path>

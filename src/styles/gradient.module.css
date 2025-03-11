@@ -1,11 +1,11 @@
 .gradient {
   background: --background;
-  background: linear-gradient(0deg, rgba(230, 228, 232, 1) 0%, rgba(242, 241, 236, 1) 30%);
+  background: linear-gradient(0deg, #DFCCDB 0%, #ffe3ee 30%);
 }
 
 .gradientReverse {
   background: --background;
-  background: linear-gradient(180deg, rgba(230, 228, 232, 1) 0%, rgba(242, 241, 236, 1) 70%);
+  background: linear-gradient(180deg, #DFCCDB  0%, #ffe3ee 70%);
 }
 
 .solutionDescription p {
