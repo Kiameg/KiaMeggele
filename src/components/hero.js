@@ -40,7 +40,11 @@ export default function Hero() {
       text: "Creative",
     },
     {
-      text: "Concept Developer",
+      text: "Concept",
+      className: "text-[#ff8cb8]",
+    },
+    {
+      text: "Developer",
       className: "text-[#ff8cb8]",
     },
     {
@@ -56,6 +60,7 @@ export default function Hero() {
         <div className="flex flex-col text-center pt-40 p-20">
           <h1 className="text-5xl pb-5">Kia Meggele</h1>
           <TypewriterEffect words={words} />
+          <h2 className="text-center mt-20">Check out my projects</h2>
         </div>
       </section>
       <section className="z-0">
@@ -67,8 +72,8 @@ export default function Hero() {
           ></path>
         </svg>
       </section>
-      <div className="flex flex-col relative z-10 mb-40">
-        <h2 className="text-center mb-10">Check out my projects</h2>
+      <div className="">
+
         <FocusCards cards={cards} />;
       </div>
 
