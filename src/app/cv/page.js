@@ -21,6 +21,7 @@ export default function CV() {
             />
           </div>
         </div>
+
         <section className="grid grid-cols-2 mt-10 gap-10 ">
           <h1 className="text-3xl">Education</h1>
           <h1 className="text-3xl pl-14">Experience</h1>
