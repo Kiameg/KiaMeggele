@@ -1,9 +1,19 @@
 'use client';
 
-import { Navbar, NavbarBrand, NavbarContent, NavbarItem } from '@heroui/react';
+import {
+  Navbar,
+  NavbarBrand,
+  NavbarContent,
+  NavbarItem,
+  NavbarMenuToggle,
+  NavbarMenu,
+  NavbarMenuItem,
+} from '@heroui/react';
 import { usePathname } from 'next/navigation';
 import { cn } from '@/lib/utils';
 import Link from 'next/link';
+import { useState } from 'react';
+
 export const AcmeLogo = () => {
   return (
     <svg fill="none" height="36" viewBox="0 0 32 32" width="36">
@@ -19,43 +29,71 @@ export const AcmeLogo = () => {
 
 export default function Header() {
   const pathname = usePathname();
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
   const isActive = (path) => pathname === path;
+
+  const menuItems = [
+    { href: '/cv', label: 'CV' },
+    { href: '/about', label: 'About' },
+    { href: '/contact', label: 'Contact' },
+  ];
+
+  const handleMenuItemClick = () => {
+    setIsMenuOpen(false);
+  };
+
   return (
-    <Navbar className="fixed top-0 left-0 right-0 z-50 border-b-1 border-black border-opacity-20">
-      <NavbarBrand>
-        <Link href="/">
-          <AcmeLogo />
-        </Link>
-      </NavbarBrand>
-      <NavbarContent className="hidden sm:flex gap-10" justify="center">
-        <NavbarItem>
-          <Link
-            color="black"
-            className={cn('hover:text-[#ff8cb8] text-lg', isActive('/cv') && 'text-[#ff8cb8]')}
-            href="/cv"
-          >
-            CV
+    <Navbar
+      className="fixed top-0 left-0 right-0 z-50 bg-transparent border-b border-black border-opacity-10"
+      isMenuOpen={isMenuOpen}
+      onMenuOpenChange={setIsMenuOpen}
+    >
+      <NavbarContent>
+        <NavbarBrand>
+          <Link href="/">
+            <AcmeLogo />
           </Link>
-        </NavbarItem>
-        <NavbarItem>
-          <Link
-            color="black"
-            className={cn('hover:text-[#ff8cb8] text-lg', isActive('/about') && 'text-[#ff8cb8]')}
-            href="/about"
-          >
-            About
-          </Link>
-        </NavbarItem>
-        <NavbarItem>
-          <Link
-            color="black"
-            className={cn('hover:text-[#ff8cb8] text-lg', isActive('/contact') && 'text-[#ff8cb8]')}
-            href="/contact"
-          >
-            Contact
-          </Link>
-        </NavbarItem>
+        </NavbarBrand>
       </NavbarContent>
+
+      <NavbarContent className="hidden sm:flex gap-10" justify="center">
+        {menuItems.map((item) => (
+          <NavbarItem key={item.href}>
+            <Link
+              color="black"
+              className={cn(
+                'hover:text-[#ff8cb8] text-lg',
+                isActive(item.href) && 'text-[#ff8cb8]'
+              )}
+              href={item.href}
+            >
+              {item.label}
+            </Link>
+          </NavbarItem>
+        ))}
+      </NavbarContent>
+
+      <NavbarContent className="sm:hidden" justify="end">
+        <NavbarMenuToggle aria-label={isMenuOpen ? 'Close menu' : 'Open menu'} />
+      </NavbarContent>
+
+      <NavbarMenu>
+        {menuItems.map((item) => (
+          <NavbarMenuItem key={item.href}>
+            <Link
+              color="black"
+              className={cn(
+                'w-full hover:text-[#ff8cb8] text-lg',
+                isActive(item.href) && 'text-[#ff8cb8]'
+              )}
+              href={item.href}
+              onClick={handleMenuItemClick}
+            >
+              {item.label}
+            </Link>
+          </NavbarMenuItem>
+        ))}
+      </NavbarMenu>
     </Navbar>
   );
 }

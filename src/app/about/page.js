@@ -1,47 +1,175 @@
-import Image from "next/image";
+'use client';
 
-
+import WaveBottom from '@/components/wave-bottom';
+import Image from 'next/image';
+import { motion } from 'framer-motion';
+import { IconCode, IconPalette, IconBulb, IconUsers } from '@tabler/icons-react';
 
 export default function About() {
+  const container = {
+    hidden: { opacity: 0 },
+    show: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.1,
+      },
+    },
+  };
+
+  const item = {
+    hidden: { opacity: 0, y: 20 },
+    show: { opacity: 1, y: 0 },
+  };
+
+  const passions = [
+    {
+      icon: <IconCode size={24} />,
+      title: 'Development',
+      description: 'Frontend development with a focus on creating beautiful, responsive interfaces',
+    },
+    {
+      icon: <IconPalette size={24} />,
+      title: 'Design',
+      description: 'UI/UX design that combines aesthetics with user-centered functionality',
+    },
+    {
+      icon: <IconBulb size={24} />,
+      title: 'Innovation',
+      description: 'Creative problem-solving and concept development for digital solutions',
+    },
+    {
+      icon: <IconUsers size={24} />,
+      title: 'Collaboration',
+      description: 'Working with teams to bring diverse perspectives together',
+    },
+  ];
+
   return (
     <>
-      <section>
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
-          <path
-            fill="#DFCCDB"
-            fillOpacity="1"
-            d="M0,128L60,144C120,160,240,192,360,186.7C480,181,600,139,720,133.3C840,128,960,160,1080,176C1200,192,1320,192,1380,192L1440,192L1440,0L1380,0C1320,0,1200,0,1080,0C960,0,840,0,720,0C600,0,480,0,360,0C240,0,120,0,60,0L0,0Z"
-          ></path>
-        </svg>
-      </section>
-      <section className=" max-w-[1000px] grid grid-cols-2 justify-center align-center mx-auto gap-11 -m-28">
-        <div>
-          <h1 className="text-3xl">About me</h1>
-          <p className="mt-7">
-            My name is Kia, and I am a passionate and creative woman dedicated to developing digital solutions that make a real impact. I have a background in Multimedia Design and Digital Concept Development, which has given me a strong foundation in mixing creativity with strategy to create meaningful experiences.
-            I currently work at WonderWorks, a digital agency where I focus on marketing, web design, frontend development, and digital concepts.
-          </p>
-          <p className="mt-4"> With years of experience in sales and customer service, I have gained valuable insights into communication, customer experience, and user needs. This allows me to approach every project with a deep understanding of how to create solutions that don’t just look good but truly connect with people.
-            I thrive in collaborative environments where different perspectives come together to build something greater, and I am always excited to take on projects that challenge me to grow.</p>
-          <p className="mt-4"> I am currently looking for work or an internship where I can further develop my skills and contribute to creating digital solutions that are both visually compelling and functionally impactful.</p>
-          <p className="mt-7 text-xl">Want to know more about me?</p>
-          <p>Feel free to catch me on <a className="underline hover:text-[#ff8cb8]" href="mailto:kiameggele@gmail.com">email</a> or <a className="underline hover:text-[#ff8cb8]" href="https://www.linkedin.com/in/kia-meggele-042705208">Linkedin</a></p>
-        </div>
-        <div>
-          <Image src="/me2.jpeg" width={500} height={700} className="object-cover rounded-2xl h-full" alt="Portrait" />
-        </div>
+      <motion.section
+        initial="hidden"
+        animate="show"
+        variants={container}
+        className="max-w-[1000px] mx-auto px-4 md:px-0 mt-32 mb-20"
+      >
+        <motion.div className="grid md:grid-cols-2 gap-10 items-start">
+          <motion.div variants={item} className="order-2 md:order-1">
+            <h1 className="text-4xl md:text-5xl mb-8 bg-gradient-to-r from-indigo-500 to-pink-500 bg-clip-text text-transparent">
+              About me
+            </h1>
 
-      </section>
-      <section>
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
-          <path
-            fill="#DFCCDB"
-            fillOpacity="1"
-            d="M0,128L60,144C120,160,240,192,360,186.7C480,181,600,139,720,133.3C840,128,960,160,1080,176C1200,192,1320,192,1380,192L1440,192L1440,320L1380,320C1320,320,1200,320,1080,320C960,320,840,320,720,320C600,320,480,320,360,320C240,320,120,320,60,320L0,320Z"
-          ></path>
-        </svg>
-      </section>
+            <motion.div variants={item} className="space-y-6 text-gray-600">
+              <p className="leading-relaxed">
+                My name is Kia, and I am a passionate and creative woman dedicated to developing
+                digital solutions that make a real impact. I have a background in Multimedia Design
+                and Digital Concept Development, which has given me a strong foundation in mixing
+                creativity with strategy to create meaningful experiences.
+              </p>
+
+              <p className="leading-relaxed">
+                I currently work at WonderWorks, a digital agency where I focus on marketing, web
+                design, frontend development, and digital concepts.
+              </p>
+
+              <p className="leading-relaxed">
+                With years of experience in sales and customer service, I have gained valuable
+                insights into communication, customer experience, and user needs. This allows me to
+                approach every project with a deep understanding of how to create solutions that
+                don&apos;t just look good but truly connect with people.
+              </p>
+
+              <p className="leading-relaxed">
+                I thrive in collaborative environments where different perspectives come together to
+                build something greater, and I am always excited to take on projects that challenge
+                me to grow.
+              </p>
+
+              <p className="leading-relaxed">
+                I am currently looking for work or an internship where I can further develop my
+                skills and contribute to creating digital solutions that are both visually
+                compelling and functionally impactful.
+              </p>
+            </motion.div>
+          </motion.div>
+
+          <motion.div variants={item} className="order-1 md:order-2 space-y-10">
+            <div className="flex justify-center">
+              <div className="relative w-64 h-64">
+                <Image
+                  src="/me2.jpeg"
+                  fill
+                  className="drop-shadow-lg object-cover rounded-2xl transition-transform duration-300 group-hover:scale-[1.02]"
+                  alt="Portrait of Kia Meggele"
+                  sizes="(max-width: 768px) 100vw, 256px"
+                  priority
+                />
+                <div className="absolute inset-0 rounded-2xl bg-gradient-to-br from-indigo-500/20 to-pink-500/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+              </div>
+            </div>
+
+            <div className="hidden md:block">
+              <h2 className="text-2xl mb-6 bg-gradient-to-r from-indigo-500 to-pink-500 bg-clip-text text-transparent">
+                What Drives Me
+              </h2>
+              <div className="grid grid-cols-1 gap-4">
+                {passions.map((passion, index) => (
+                  <motion.div
+                    key={passion.title}
+                    variants={{
+                      hidden: { opacity: 0, y: 20 },
+                      show: {
+                        opacity: 1,
+                        y: 0,
+                        transition: { delay: index * 0.1 },
+                      },
+                    }}
+                    className="group p-4 rounded-lg bg-white border border-gray-100 hover:border-pink-200 transition-all duration-300 hover:shadow-lg"
+                  >
+                    <div className="flex items-center gap-3">
+                      <div className="text-indigo-500 group-hover:text-pink-500 transition-colors duration-300">
+                        {passion.icon}
+                      </div>
+                      <h3 className="text-lg font-medium text-gray-800">{passion.title}</h3>
+                    </div>
+                    <p className="text-sm text-gray-600 mt-2">{passion.description}</p>
+                  </motion.div>
+                ))}
+              </div>
+            </div>
+          </motion.div>
+        </motion.div>
+
+        <motion.div variants={item} className="mt-20 md:hidden">
+          <h2 className="text-2xl mb-6 bg-gradient-to-r from-indigo-500 to-pink-500 bg-clip-text text-transparent">
+            What Drives Me
+          </h2>
+          <div className="grid grid-cols-1 gap-4">
+            {passions.map((passion, index) => (
+              <motion.div
+                key={passion.title}
+                variants={{
+                  hidden: { opacity: 0, y: 20 },
+                  show: {
+                    opacity: 1,
+                    y: 0,
+                    transition: { delay: index * 0.1 },
+                  },
+                }}
+                className="group p-4 rounded-lg bg-white border border-gray-100 hover:border-pink-200 transition-all duration-300 hover:shadow-lg"
+              >
+                <div className="flex items-center gap-3">
+                  <div className="text-indigo-500 group-hover:text-pink-500 transition-colors duration-300">
+                    {passion.icon}
+                  </div>
+                  <h3 className="text-lg font-medium text-gray-800">{passion.title}</h3>
+                </div>
+                <p className="text-sm text-gray-600 mt-2">{passion.description}</p>
+              </motion.div>
+            ))}
+          </div>
+        </motion.div>
+      </motion.section>
+      <WaveBottom />
     </>
-
-  )
+  );
 }

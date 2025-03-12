@@ -1,136 +1,191 @@
-"use client"
+'use client';
 
-import Image from "next/image";
-import Link from "next/link";
-import { Chip } from "@heroui/react";
-
+import Image from 'next/image';
+import { Chip } from '@heroui/react';
+import WaveBottom from '@/components/wave-bottom';
+import { motion } from 'framer-motion';
+import { IconDownload } from '@tabler/icons-react';
 
 export default function CV() {
+  const experience = [
+    'Marketing',
+    'Design Thinking',
+    'Webdesign',
+    'Project Management',
+    'UX Research',
+    'Frontend Development',
+    'UI & UX Design',
+    'Concept Development',
+  ];
+
+  const container = {
+    hidden: { opacity: 0 },
+    show: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.1,
+      },
+    },
+  };
+
+  const item = {
+    hidden: { opacity: 0, y: 20 },
+    show: { opacity: 1, y: 0 },
+  };
+
   return (
     <>
-      <section>
-        <section>
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
-            <path
-              fill="#DFCCDB"
-              fillOpacity="1"
-              d="M0,128L60,144C120,160,240,192,360,186.7C480,181,600,139,720,133.3C840,128,960,160,1080,176C1200,192,1320,192,1380,192L1440,192L1440,0L1380,0C1320,0,1200,0,1080,0C960,0,840,0,720,0C600,0,480,0,360,0C240,0,120,0,60,0L0,0Z"
-            ></path>
-          </svg>
-        </section>
-        <div className="flex flex-col justify-center max-w-[1000px] mx-auto -m-40 ">
-          <div className="flex justify-between items-center w-full">
-            <h1 className="text-4xl">Kia Meggele</h1>
-            <div className="w-40 h-40 overflow-hidden rounded-full">
-              <Image
-                src="/me2.jpeg"
-                width={160}
-                height={160}
-                className="rounded-full object-cover"
-                alt="Photo of me"
-              />
+      <motion.section
+        initial="hidden"
+        animate="show"
+        variants={container}
+        className="flex flex-col justify-center max-w-[1000px] mx-auto mt-32 px-4 md:px-0"
+      >
+        <motion.div
+          variants={item}
+          className="flex flex-col md:flex-row justify-between items-center w-full gap-8"
+        >
+          <div>
+            <h1 className="text-4xl md:text-5xl mb-4">Kia Meggele</h1>
+            <p className="text-gray-600 max-w-md">
+              Passionate concept developer with a focus on creating meaningful digital experiences
+              through design thinking and technical implementation.
+            </p>
+          </div>
+          <div className="w-40 h-40 overflow-hidden rounded-full drop-shadow-lg hover:scale-105 transition-transform">
+            <Image
+              src="/me2.jpeg"
+              width={160}
+              height={160}
+              className="rounded-full object-cover"
+              alt="Photo of me"
+            />
+          </div>
+        </motion.div>
+
+        <motion.div variants={item} className="mt-12 flex justify-center md:block">
+          <a
+            href="/cv.pdf"
+            download
+            className="inline-flex items-center gap-2 px-4 py-2 bg-gradient-to-br from-indigo-500 to-pink-500 text-white rounded-full hover:opacity-90 transition-opacity"
+          >
+            <IconDownload size={20} />
+            Download CV
+          </a>
+        </motion.div>
+
+        <motion.section variants={item} className="grid md:grid-cols-2 mt-10 gap-24">
+          <div>
+            <h2 className="text-3xl mb-8 bg-gradient-to-r from-indigo-500 to-pink-500 bg-clip-text text-transparent">
+              Education
+            </h2>
+            <div className="space-y-8">
+              <motion.div variants={item} className="group">
+                <h3 className="text-xl group-hover:text-pink-500 transition-colors border-b pb-1">
+                  Copenhagen School of Design and Technology
+                </h3>
+                <div className="flex justify-between text-l mt-2">
+                  <p className="text-gray-600 flex-1">BA in Digital Concept Development</p>
+                  <p className="text-gray-500 flex-2">2024 - Now</p>
+                </div>
+                <div className="flex justify-between text-l mt-3">
+                  <p className="text-gray-600 flex-1">AP Graduate in Multimedia Design</p>
+                  <p className="text-gray-500 flex-2">2022 - 2024</p>
+                </div>
+              </motion.div>
+
+              <motion.div variants={item} className="group">
+                <h3 className="text-xl group-hover:text-pink-500 transition-colors border-b pb-1">
+                  KVUC, HF
+                </h3>
+                <div className="flex justify-between text-l mt-2">
+                  <p className="text-gray-600 flex-1">Upper Secondary Education</p>
+                  <p className="text-gray-500 flex-2">2020 - 2022</p>
+                </div>
+              </motion.div>
+
+              <motion.div variants={item} className="group">
+                <h3 className="text-xl group-hover:text-pink-500 transition-colors border-b pb-1">
+                  Matas
+                </h3>
+                <div className="flex justify-between text-l mt-2">
+                  <p className="text-gray-600 flex-1">Materalist Education</p>
+                  <p className="text-gray-500 flex-2">2016 - 2018</p>
+                </div>
+              </motion.div>
             </div>
           </div>
-          <section className="grid grid-cols-2 mt-10 gap-10 ">
-            <h1 className="text-3xl">Education</h1>
-            <h1 className="text-3xl pl-14">Experience</h1>
-            <div className="education pr-14 ">
-              <h2 className="text-xl">Copenhagen School of Design and Technology</h2>
-              <div className="flex justify-between text-l mt-5">
-                <p>BA in Digital Concept Development</p>
-                <p>2024 - Now</p>
-              </div>
-              <div className="flex justify-between text-l mt-5">
-                <p>AP Graduate in Multimedia Design</p>
-                <p>2022 - 2024</p>
-              </div>
-              <div className="mt-7">
-                <h2 className="text-xl">KVUC, HF</h2>
-                <div className="flex justify-between text-l mt-2">
-                  <p>Upper Secondary Education</p>
-                  <p>2020 - 2022</p>
-                </div>
-              </div>
-              <div className="mt-7">
-                <h2 className="text-xl">Matas</h2>
-                <div className="flex justify-between text-l mt-2">
-                  <p>Materalist Education</p>
-                  <p>2016 - 2018</p>
-                </div>
-              </div>
-            </div>
-            <div className="experience pl-14">
-              <h2 className="text-xl">Tutor at KEA</h2>
-              <div className="flex justify-between text-l mt-2">
-                <p>Multimediadesign tutor</p>
-                <p>2024 - Now</p>
-              </div>
-              <div className="mt-7">
-                <h2 className="text-xl">Wonderworks</h2>
-                <div className="flex justify-between text-l mt-2">
-                  <p>Creative Lead</p>
-                  <p>2024 - Now</p>
-                </div>
-              </div>
-              <div className="mt-7">
-                <h2 className="text-xl">Matas</h2>
-                <div className="flex justify-between text-l mt-2">
-                  <p>Part Time Sales Assistent</p>
-                  <p>2020 - 2023</p>
-                </div>
-                <div className="flex justify-between text-l mt-5">
-                  <p>Full Time Sales Assistant</p>
-                  <p>2018 - 2020</p>
-                </div>
-              </div>
-            </div>
-          </section>
 
-          <div className="text-3xl mt-20 max-w-[400px] mb-10">
-            <h1>Experience with</h1>
-            <div className="">
-              <Chip
-                classNames={{ base: "bg-gradient-to-br from-indigo-500 to-pink-500 border-small border-white/50 shadow-pink-500/30", content: "drop-shadow shadow-black text-white", }} variant="shadow">
-                UX Research
-              </Chip>
-              <Chip
-                classNames={{ base: "bg-gradient-to-br from-indigo-500 to-pink-500 border-small border-white/50 shadow-pink-500/30", content: "drop-shadow shadow-black text-white", }} variant="shadow">
-                Concept Development
-              </Chip>
-              <Chip
-                classNames={{ base: "bg-gradient-to-br from-indigo-500 to-pink-500 border-small border-white/50 shadow-pink-500/30", content: "drop-shadow shadow-black text-white", }} variant="shadow">
-                UI & UX Design
-              </Chip>
-              <Chip
-                classNames={{ base: "bg-gradient-to-br from-indigo-500 to-pink-500 border-small border-white/50 shadow-pink-500/30", content: "drop-shadow shadow-black text-white", }} variant="shadow">
-                Design Thinking
-              </Chip>
-              <Chip
-                classNames={{ base: "bg-gradient-to-br from-indigo-500 to-pink-500 border-small border-white/50 shadow-pink-500/30", content: "drop-shadow shadow-black text-white", }} variant="shadow">
-                Webdesign
-              </Chip>
-              <Chip
-                classNames={{ base: "bg-gradient-to-br from-indigo-500 to-pink-500 border-small border-white/50 shadow-pink-500/30", content: "drop-shadow shadow-black text-white", }} variant="shadow">
-                Marketing
-              </Chip>
-              <Chip
-                classNames={{ base: "bg-gradient-to-br from-indigo-500 to-pink-500 border-small border-white/50 shadow-pink-500/30", content: "drop-shadow shadow-black text-white", }} variant="shadow">
-                Frontend Development
-              </Chip>
+          <div>
+            <h2 className="text-3xl mb-8 bg-gradient-to-r from-indigo-500 to-pink-500 bg-clip-text text-transparent">
+              Experience
+            </h2>
+            <div className="space-y-8">
+              <motion.div variants={item} className="group">
+                <h3 className="text-xl group-hover:text-pink-500 transition-colors border-b pb-1">
+                  Tutor at KEA
+                </h3>
+                <div className="flex justify-between text-l mt-2">
+                  <p className="text-gray-600 flex-1">Multimediadesign tutor</p>
+                  <p className="text-gray-500 flex-2">2024 - Now</p>
+                </div>
+              </motion.div>
+
+              <motion.div variants={item} className="group">
+                <h3 className="text-xl group-hover:text-pink-500 transition-colors border-b pb-1">
+                  Wonderworks
+                </h3>
+                <div className="flex justify-between text-l mt-2">
+                  <p className="text-gray-600 flex-1">Creative Lead</p>
+                  <p className="text-gray-500 flex-2">2024 - Now</p>
+                </div>
+              </motion.div>
+
+              <motion.div variants={item} className="group">
+                <h3 className="text-xl group-hover:text-pink-500 transition-colors border-b pb-1">
+                  Matas
+                </h3>
+                <div className="flex justify-between text-l mt-2">
+                  <p className="text-gray-600 flex-1">Part Time Sales Assistant</p>
+                  <p className="text-gray-500 flex-2">2020 - 2023</p>
+                </div>
+                <div className="flex justify-between text-l mt-3">
+                  <p className="text-gray-600 flex-1">Full Time Sales Assistant</p>
+                  <p className="text-gray-500 flex-2">2018 - 2020</p>
+                </div>
+              </motion.div>
             </div>
           </div>
-        </div>
-      </section>
-      <section>
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
-          <path
-            fill="#DFCCDB"
-            fillOpacity="1"
-            d="M0,128L60,144C120,160,240,192,360,186.7C480,181,600,139,720,133.3C840,128,960,160,1080,176C1200,192,1320,192,1380,192L1440,192L1440,320L1380,320C1320,320,1200,320,1080,320C960,320,840,320,720,320C600,320,480,320,360,320C240,320,120,320,60,320L0,320Z"
-          ></path>
-        </svg>
-      </section>
+        </motion.section>
 
+        <motion.div variants={item} className="mt-20 mb-20">
+          <h2 className="text-3xl mb-8 bg-gradient-to-r from-indigo-500 to-pink-500 bg-clip-text text-transparent">
+            Skills & Expertise
+          </h2>
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-3">
+            {experience.map((item, index) => (
+              <motion.div
+                key={item}
+                variants={{
+                  hidden: { opacity: 0, scale: 0.8 },
+                  show: { opacity: 1, scale: 1, transition: { delay: index * 0.1 } },
+                }}
+              >
+                <Chip
+                  classNames={{
+                    base: 'bg-gradient-to-br from-indigo-500 to-pink-500 border-small border-white/50 shadow-pink-500/30 w-full',
+                    content: 'drop-shadow shadow-black text-white text-center',
+                  }}
+                  variant="shadow"
+                >
+                  {item}
+                </Chip>
+              </motion.div>
+            ))}
+          </div>
+        </motion.div>
+      </motion.section>
+      <WaveBottom />
     </>
   );
 }
