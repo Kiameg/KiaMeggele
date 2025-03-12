@@ -10,7 +10,7 @@ export default async function Projectview({ params }) {
     jouxli: {
       hero: {
         title: 'Jouxli',
-        image: '/jouxli_cover.png',
+        image: '/jouxli_comp.webp',
       },
       problem: {
         description:
@@ -19,8 +19,8 @@ export default async function Projectview({ params }) {
           'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
         problemStatement:
           'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
-        appImage1: '/jouxli_app1.png',
-        appImage2: '/jouxli_app2.png',
+        appImage1: '/jouxli_mobil.webp',
+        appImage2: '/jouxli_mobil2.webp',
       },
       research: {
         insights: [
@@ -41,13 +41,13 @@ export default async function Projectview({ params }) {
             <li>lorem ipsum dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit amet</li>
             <li>lorem ipsum dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit amet</li>
           </ul>`,
-        image: '/jouxli_cover.png',
+        video: '/videos/jouxli_vid2.mp4',
       },
     },
     superkilen: {
       hero: {
         title: 'Superkilen',
-        image: '/Superkilen_cover.png',
+        image: '/Superkilen_comp.webp',
       },
       problem: {
         description:
@@ -56,8 +56,7 @@ export default async function Projectview({ params }) {
           'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
         problemStatement:
           'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
-        appImage1: '/superkilen_app1.png',
-        appImage2: '/superkilen_app2.png',
+        image: '/superkilen.webp',
       },
       research: {
         insights: [
@@ -78,13 +77,13 @@ export default async function Projectview({ params }) {
             <li>lorem ipsum dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit amet</li>
             <li>lorem ipsum dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit amet</li>
           </ul>`,
-        image: '/superkilen_solution.png',
+        video: '/videos/superkilen2.mp4',
       },
     },
     wonderworks: {
       hero: {
         title: 'Wonderworks',
-        image: '/wonderworks_cover.png',
+        image: '/wonderworks_comp.webp',
       },
       whoarewe: {
         description:
@@ -99,11 +98,12 @@ export default async function Projectview({ params }) {
         description:
           "I work passionately on my own and our projects and have extensive experience with user experience and ux research. We place great emphasis on the user's story and needs in order to create a personalized solution that tells their story. It should not only look good, but also feel right. We have a variety of tools in out toolkit and come from different backgrounds that support our passionate and high-quality work.",
       },
+      image: '/wonderworks_cover.webp',
     },
     wonderfulcph: {
       hero: {
         title: 'Wonderful Copenhagen',
-        image: '/wonderful_cph.png',
+        image: '/wonderfulcph_comp.webp',
       },
       problem: {
         description:
@@ -112,8 +112,7 @@ export default async function Projectview({ params }) {
           'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
         problemStatement:
           'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
-        appImage1: '/wonderfulcph_app1.png',
-        appImage2: '/wonderfulcph_app2.png',
+        image: '/wonderfulcph.png',
       },
       research: {
         insights: [
@@ -134,7 +133,7 @@ export default async function Projectview({ params }) {
             <li>lorem ipsum dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit amet</li>
             <li>lorem ipsum dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit amet</li>
           </ul>`,
-        image: '/wonderfulcph_solution.png',
+        video: '/videos/wonderful_cph2.mp4',
       },
     },
   };
@@ -220,17 +219,15 @@ export default async function Projectview({ params }) {
             <section className="flex-1">
               <div className="relative w-full aspect-[4/3] rounded-lg overflow-hidden">
                 <Image
-                  src="/wonderworks_team.png"
+                  src={project.image}
                   alt="Wonderworks team"
                   fill
                   className="object-cover"
                   sizes="(max-width: 768px) 100vw, 50vw"
-                  priority
                 />
               </div>
             </section>
           </div>
-          <WaveBottom />
         </>
       )}
 
@@ -250,22 +247,39 @@ export default async function Projectview({ params }) {
                   <p className="text-center font-semibold">{project.problem.problemStatement}</p>
                 </div>
               </div>
-              <div className="md:grid md:grid-cols-[150px_150px] md:gap-8 md:justify-items-center md:justify-self-end flex justify-around">
-                <Image
-                  src={project.problem.appImage1}
-                  alt={`${project.hero.title} App Screenshot 1`}
-                  width={150}
-                  height={320}
-                  className="object-contain max-h-80"
-                />
-                <Image
-                  src={project.problem.appImage2}
-                  alt={`${project.hero.title} App Screenshot 2`}
-                  width={150}
-                  height={320}
-                  className="object-contain max-h-80 md:self-end"
-                />
-              </div>
+              {project.problem.appImage1 && project.problem.appImage2 ? (
+                // For projects with two mobile app images
+                <div className="md:grid md:gap-8 md:justify-items-center md:justify-self-end flex justify-around">
+                  <div className="md:grid md:grid-cols-[150px_150px] md:gap-8 flex gap-4">
+                    <Image
+                      src={project.problem.appImage1}
+                      alt={`${project.hero.title} App Screenshot 1`}
+                      width={150}
+                      height={320}
+                      className="object-contain max-h-80"
+                    />
+                    <Image
+                      src={project.problem.appImage2}
+                      alt={`${project.hero.title} App Screenshot 2`}
+                      width={150}
+                      height={320}
+                      className="object-contain max-h-80 md:self-end"
+                    />
+                  </div>
+                </div>
+              ) : project.problem.image ? (
+                // For projects with a single image
+                <div className="flex items-center">
+                  <div className="w-full relative aspect-video">
+                    <Image
+                      src={project.problem.image}
+                      alt={`${project.hero.title} Problem Illustration`}
+                      fill
+                      className="object-cover rounded-lg"
+                    />
+                  </div>
+                </div>
+              ) : null}
             </div>
           </section>
         </>
@@ -288,7 +302,7 @@ export default async function Projectview({ params }) {
         </section>
       )}
 
-      <WaveBottom />
+      {project === 'wonderworks' ? null : <WaveBottom />}
 
       {project.solution && (
         <div className={`${styles.gradientReverse}`}>
@@ -302,13 +316,25 @@ export default async function Projectview({ params }) {
                 />
               </div>
               <div className="w-full relative aspect-video self-center">
-                <Image
-                  src={project.solution.image}
-                  alt={project.hero.title}
-                  fill
-                  className="object-cover rounded-lg"
-                  priority
-                />
+                {project.solution.video ? (
+                  <video
+                    src={project.solution.video}
+                    controls
+                    className="w-full h-full rounded-lg"
+                    poster={project.hero.image}
+                    muted={true}
+                  />
+                ) : (
+                  project.solution.image && (
+                    <Image
+                      src={project.solution.image}
+                      alt={project.hero.title}
+                      fill
+                      className="object-cover rounded-lg"
+                      priority
+                    />
+                  )
+                )}
               </div>
             </div>
           </section>

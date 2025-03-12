@@ -9,7 +9,12 @@ export default function Footer() {
   const pathname = usePathname();
 
   return (
-    <div className={cn(pathname.includes('/project/') ? 'bg-[#ffe3ee]' : 'bg-[#DFCCDB]')}>
+    <div
+      className={cn(
+        pathname.includes('/project/') ? 'bg-[#ffe3ee]' : 'bg-[#DFCCDB]',
+        pathname.includes('/wonderworks') && 'bg-[#DFCCDB]'
+      )}
+    >
       <footer className="text-center md:text-inherit flex flex-col gap-4 mx-auto justify-center items-center max-w-[1000px] py-12 md:pb-24 md:pt-0 md:-mt-24">
         <div>
           <h1 className="text-5xl">Are we a match?</h1>

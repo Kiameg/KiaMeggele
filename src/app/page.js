@@ -24,7 +24,7 @@ export default function Home() {
   const cards = [
     {
       title: 'jOUXli',
-      src: '/jouxli_cover.png',
+      src: '/jouxli_cover.webp',
       href: '/project/jouxli',
     },
     {
@@ -34,12 +34,12 @@ export default function Home() {
     },
     {
       title: 'Superkilen',
-      src: '/superkilen_cover.png',
+      src: '/superkilen_cover.webp',
       href: '/project/superkilen',
     },
     {
       title: 'Wonderworks',
-      src: '/wonderworks_cover.png',
+      src: '/wonderworks_cover.webp',
       href: '/project/wonderworks',
     },
   ];
