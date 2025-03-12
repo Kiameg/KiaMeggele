@@ -29,8 +29,8 @@ export default function Home() {
     <>
       <section>
         <Hero />
-        <div className="flex flex-col gap-4">
-          <h2 className="text-2xl text-center">Check out my projects</h2>
+        <div className="flex flex-col gap-4 -m-20 pb-10">
+          <h2 className="text-2xl text-center mb-36">Check out my projects</h2>
           <FocusCards cards={cards} />
         </div>
       </section>

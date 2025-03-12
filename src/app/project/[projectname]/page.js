@@ -6,30 +6,31 @@ import DOMPurify from 'isomorphic-dompurify';
 export default async function Projectview({ params }) {
   const PROJECTSDATA = {
     jouxli: {
-      title: 'Jouxli',
+      title: 'jOUXli',
       description:
-        'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+        'Jouxli is a jewelry company run by designer Lise Gammeltoft from her home in Charlottenlund. Lise creates unique jewelry pieces from elements she finds around the world. Her jewelry brings together stories from ancient times and modern Scandinavian design. By respecting the soul and origin of the objects, Lise creates a connection to the present by combining the antique parts of her jewelry with modern, sustainable, and contemporary elements. Most important to Lise, however, is the personal connection with her customers. In a society where we increasingly communicate online, she feels the need to share her unique story across platforms. ',
       description2:
-        'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+        'With these objectives in mind, we formulated the following problem area:',
       problem:
-        'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+        'How do we build a consistent visual identity for the client across platforms while effectively communicating her story?',
       heroImage: '/jouxli_cover.png',
       appImage1: '/jouxli_app1.png',
       appImage2: '/jouxli_app2.png',
-      research1: 'lorem ipsum dolor sit amet lorem ipsum dolor sit amet',
-      research2: 'lorem ipsum dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit amet',
+      research1: 'Our respondents place significant value on collaborating with the maker and being involved in the creation of a piece of jewelry',
+      research2: 'The price is irrelevant to them as long as the jewelry is the right one',
       research3:
-        'lorem ipsum dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit ametlorem ipsum dolor sit amet',
-      research4: 'lorem ipsum dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit amet',
-      solutionDescriptionHtml: `<p>lorem ipsum dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit amet</p>
+        'Many buy cheaper and trendy jewelry',
+      research4: 'jOUXli’s main costumer base had been those aged 60 and older',
+      solutionDescriptionHtml: `<p>The purpose of our solution is to interpret Jouxli’s style and establish a cohesive visual identity through a multimedia approach. This has been achieved through a structured workflow that encompasses all aspects of Jouxli’s business, aiming to create a well-defined visual identity and effectively communicate her story.  </p>
         <br />
-        <p>lorem ipsum dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit amet</p>
+        <p>A visit to Jouxli kickstarted the design process, and the third iteration of the prototype finally achieved the personal expression that was our original goal, as we had found great inspiration in Jouxli’s home.</p>
         <br />
         <p>We did this by: </p>
         <ul>
-          <li>lorem ipsum dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit amet</li>
-          <li>lorem ipsum dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit amet</li>
-          <li>lorem ipsum dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit amet</li>
+          <li>The implementation of the illustration on the prototype’s background created the unity and continuity across the pages, which also helps to clarify Jouxli’s brand identity</li>
+          <li>Overall pleasing, easy and minimalistic design</li>
+          <li>A lot of hours spent in JOUXli’s house, observing, interviewing and getting to know the owner</li>
+          <li>Besides interviewing, surveys and more, we made sure to user test every prototype before moving on</li>
         </ul>
         `,
       solutionImage: '/jouxli_cover.png',
@@ -91,58 +92,32 @@ export default async function Projectview({ params }) {
         `,
       solutionImage: '/wonderworks_solution.png',
     },
-    uldahl: {
-      title: 'Uldahl',
-      description:
-        'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
-      description2:
-        'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
-      problem:
-        'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
-      heroImage: '/uldahl_cover.png',
-      appImage1: '/uldahl_app1.png',
-      appImage2: '/uldahl_app2.png',
-      research1: 'lorem ipsum dolor sit amet lorem ipsum dolor sit amet',
-      research2: 'lorem ipsum dolor sit amet lorem ipsum dolor sit amet',
-      research3: 'lorem ipsum dolor sit amet lorem ipsum dolor sit amet',
-      research4: 'lorem ipsum dolor sit amet lorem ipsum dolor sit amet',
-      solutionDescriptionHtml: `<p>lorem ipsum dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit amet</p>
-        <br />
-        <p>lorem ipsum dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit amet</p>
-        <br />
-        <p>We did this by: </p>
-        <ul>
-          <li>lorem ipsum dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit amet</li>
-          <li>lorem ipsum dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit amet</li>
-          <li>lorem ipsum dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit amet</li>
-        </ul>
-        `,
-      solutionImage: '/uldahl_solution.png',
-    },
+
     wonderfulcph: {
       title: 'Wonderful Copenhagen',
       description:
-        'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+        'One of the leading organizations working to promote tourism in the Capital Region is Wonderful Copenhagen, a non-profit organization. As a central collaborative body for the regions tourism stakeholders, Wonderful Copenhagen focuses on marketing, events, and innovation to strengthen the regions position as an attractive destination for both tourists and international congresses. Additionally, they aim to further enhance this position through advanced digital tools and sustainable solutions, creating responsible and future-proof travel experiences.',
       description2:
-        'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+        'With these objectives in mind, we formulated the following problem area: ',
       problem:
-        'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+        'How can we create a digital solution that enhances the tourist experience in Copenhagen for people with disabilities, with a particular focus on those with visual or hearing impairments?',
       heroImage: '/wonderful_cph.png',
       appImage1: '/wonderfulcph_app1.png',
       appImage2: '/wonderfulcph_app2.png',
-      research1: 'lorem ipsum dolor sit amet lorem ipsum dolor sit amet',
-      research2: 'lorem ipsum dolor sit amet lorem ipsum dolor sit amet',
-      research3: 'lorem ipsum dolor sit amet lorem ipsum dolor sit amet',
-      research4: 'lorem ipsum dolor sit amet lorem ipsum dolor sit amet',
-      solutionDescriptionHtml: `<p>lorem ipsum dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit amet</p>
+      research1: 'Deaf and blind individuals experience significant challenges navigating urban spaces',
+      research2: 'Initiatives such as the sunflower and badges create increased safety and awareness for both people with disabilities and their relatives',
+      research3: 'Copenhagen can improve its accessibility for people with disabilities',
+      research4: 'Deaf and blind individuals often rely on their tactile senses to orient themselves when navigating new surroundings.',
+      solutionDescriptionHtml: `<p>As we finished our design sprint, we started developing the concept-  A city for all.</p>
         <br />
-        <p>lorem ipsum dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit amet</p>
+        <p>A concept which is about the overall user journey. How we want to take the user by the hand and guide them from start to finish. Even though our focus was on individuals with hearing impairments, we believe that our solution could be used by several individuals with disabilities. </p>
         <br />
         <p>We did this by: </p>
         <ul className="hidden">
-          <li>lorem ipsum dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit amet</li>
-          <li>lorem ipsum dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit amet</li>
-          <li>lorem ipsum dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit amet</li>
+          <li>Creating a better and more intuitive UX experience overall</li>
+          <li>A purchase flow that includes people with disabilities</li>
+          <li>Creating a safe space at concerts where individuals can bring their relatives and friends</li>
+          <li>Free loan of a sensory vest to wear under the concert, providing to a greater experience</li>
         </ul>
         `,
       solutionImage: '/wonderfulcph_solution.png',
@@ -245,7 +220,7 @@ export default async function Projectview({ params }) {
       </section>
 
       {/* Research */}
-      <section id="research" className="md:max-w-6xl md:mx-auto md:pt-48 md:pb-0 pt-24 pb-12 px-4">
+      <section id="research" className="md:max-w-6xl md:mx-auto md:pt-20 md:pb-0 pt-24 pb-12 px-4">
         {/* Research title */}
         <h3 className="text-4xl font-light pb-4 text-center">Insight from research</h3>
         {/* Research grid */}
@@ -274,6 +249,34 @@ export default async function Projectview({ params }) {
       </section>
 
       {/* Wave SVG Bottom */}
+
+
+      {/* Solution */}
+
+      <section id="solution" className="md:max-w-6xl md:mx-auto md:pt-0 mt-40 px-4">
+        {/* Solution title */}
+        <h3 className="text-4xl font-light pb-4">Solution</h3>
+        {/* Solution grid */}
+        <div className="md:grid md:grid-cols-2 md:gap-8 flex flex-col gap-12">
+          {/* Solution description */}
+          <div className={`${styles.solutionDescription}`}>
+            <div
+              className="border-t border-black pt-4"
+              dangerouslySetInnerHTML={{ __html: cleanHtml }}
+            />
+          </div>
+          {/* Solution image */}
+          <div className="w-full relative aspect-video self-center">
+            <Image
+              src={PROJECTSDATA[projectname]?.solutionImage}
+              alt={PROJECTSDATA[projectname]?.title}
+              fill
+              className="object-cover rounded-lg"
+              priority
+            />
+          </div>
+        </div>
+      </section>
       <section>
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
           <path
@@ -283,34 +286,6 @@ export default async function Projectview({ params }) {
           ></path>
         </svg>
       </section>
-
-      {/* Solution */}
-      <div className={`${styles.gradientReverse}`}>
-        <section id="solution" className="md:max-w-6xl md:mx-auto pb-24 md:pt-0 pt-12 px-4">
-          {/* Solution title */}
-          <h3 className="text-4xl font-light pb-4">Solution</h3>
-          {/* Solution grid */}
-          <div className="md:grid md:grid-cols-2 md:gap-8 flex flex-col gap-12">
-            {/* Solution description */}
-            <div className={`${styles.solutionDescription}`}>
-              <div
-                className="border-t border-black pt-4"
-                dangerouslySetInnerHTML={{ __html: cleanHtml }}
-              />
-            </div>
-            {/* Solution image */}
-            <div className="w-full relative aspect-video self-center">
-              <Image
-                src={PROJECTSDATA[projectname]?.solutionImage}
-                alt={PROJECTSDATA[projectname]?.title}
-                fill
-                className="object-cover rounded-lg"
-                priority
-              />
-            </div>
-          </div>
-        </section>
-      </div>
     </>
   );
 }

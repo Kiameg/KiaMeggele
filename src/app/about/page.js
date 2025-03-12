@@ -5,7 +5,16 @@ import Image from "next/image";
 export default function About() {
   return (
     <>
-      <section className=" max-w-[1000px] grid grid-cols-2 justify-center align-center mx-auto gap-10 mt-20">
+      <section>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+          <path
+            fill="#DFCCDB"
+            fillOpacity="1"
+            d="M0,128L60,144C120,160,240,192,360,186.7C480,181,600,139,720,133.3C840,128,960,160,1080,176C1200,192,1320,192,1380,192L1440,192L1440,0L1380,0C1320,0,1200,0,1080,0C960,0,840,0,720,0C600,0,480,0,360,0C240,0,120,0,60,0L0,0Z"
+          ></path>
+        </svg>
+      </section>
+      <section className=" max-w-[1000px] grid grid-cols-2 justify-center align-center mx-auto gap-11 -m-28">
         <div>
           <h1 className="text-3xl">About me</h1>
           <p className="mt-7">
@@ -22,6 +31,15 @@ export default function About() {
           <Image src="/me2.jpeg" width={500} height={700} className="object-cover rounded-2xl h-full" alt="Portrait" />
         </div>
 
+      </section>
+      <section>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+          <path
+            fill="#DFCCDB"
+            fillOpacity="1"
+            d="M0,128L60,144C120,160,240,192,360,186.7C480,181,600,139,720,133.3C840,128,960,160,1080,176C1200,192,1320,192,1380,192L1440,192L1440,320L1380,320C1320,320,1200,320,1080,320C960,320,840,320,720,320C600,320,480,320,360,320C240,320,120,320,60,320L0,320Z"
+          ></path>
+        </svg>
       </section>
     </>
 
