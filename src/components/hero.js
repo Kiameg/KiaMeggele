@@ -5,6 +5,7 @@ import styles from '@/styles/gradient.module.css';
 import { TypewriterEffect, TypewriterEffectSmooth } from './ui/typewriter-effect';
 import { FocusCards } from './ui/focus-cards';
 
+
 export default function Hero() {
   const words = [
     {
@@ -36,6 +37,7 @@ export default function Hero() {
           <h1 className="text-6xl pb-5">Kia Meggele</h1>
           <TypewriterEffect words={words} />
         </div>
+        <h2 className="text-center text-xl">Check out my projects</h2>
       </section>
       <section className="z-0">
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
