@@ -1,7 +1,9 @@
-"use client"
+'use client';
 
-import { Navbar, NavbarBrand, NavbarContent, NavbarItem, Link, Button } from "@heroui/react";
-
+import { Navbar, NavbarBrand, NavbarContent, NavbarItem } from '@heroui/react';
+import { usePathname } from 'next/navigation';
+import { cn } from '@/lib/utils';
+import Link from 'next/link';
 export const AcmeLogo = () => {
   return (
     <svg fill="none" height="36" viewBox="0 0 32 32" width="36">
@@ -16,24 +18,40 @@ export const AcmeLogo = () => {
 };
 
 export default function Header() {
+  const pathname = usePathname();
+  const isActive = (path) => pathname === path;
   return (
-    <Navbar>
+    <Navbar className="fixed top-0 left-0 right-0 z-50 border-b-1 border-black border-opacity-20">
       <NavbarBrand>
-        <AcmeLogo />
+        <Link href="/">
+          <AcmeLogo />
+        </Link>
       </NavbarBrand>
       <NavbarContent className="hidden sm:flex gap-10" justify="center">
         <NavbarItem>
-          <Link color="black" className="hover:text-[#ff8cb8]" href="/cv">
+          <Link
+            color="black"
+            className={cn('hover:text-[#ff8cb8] text-lg', isActive('/cv') && 'text-[#ff8cb8]')}
+            href="/cv"
+          >
             CV
           </Link>
         </NavbarItem>
         <NavbarItem>
-          <Link color="black" className="hover:text-[#ff8cb8]" href="/about">
+          <Link
+            color="black"
+            className={cn('hover:text-[#ff8cb8] text-lg', isActive('/about') && 'text-[#ff8cb8]')}
+            href="/about"
+          >
             About
           </Link>
         </NavbarItem>
         <NavbarItem>
-          <Link color="black" className="hover:text-[#ff8cb8]" href="/contact">
+          <Link
+            color="black"
+            className={cn('hover:text-[#ff8cb8] text-lg', isActive('/contact') && 'text-[#ff8cb8]')}
+            href="/contact"
+          >
             Contact
           </Link>
         </NavbarItem>
