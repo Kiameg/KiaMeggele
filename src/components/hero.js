@@ -1,65 +1,40 @@
-"use client";
-import Image from "next/image";
-import Link from "next/link";
+'use client';
+import Image from 'next/image';
+import Link from 'next/link';
 import styles from '@/styles/gradient.module.css';
-import { TypewriterEffect, TypewriterEffectSmooth } from "./ui/typewriter-effect";
-import { FocusCards } from "./ui/focus-cards";
+import { TypewriterEffect, TypewriterEffectSmooth } from './ui/typewriter-effect';
+import { FocusCards } from './ui/focus-cards';
 
 
 export default function Hero() {
-  const cards = [
-    {
-      title: "jOUXli",
-      src: "/jouxli_cover.png",
-      href: "/project/jouxli"
-    },
-    {
-      title: "Wonderful CPH",
-      src: "/acityforall_cover.webp",
-      href: "/project/wonderfulcph"
-    },
-    {
-      title: "Superkilen",
-      src: "/superkilen_cover.png",
-      href: "/project/superkilen"
-    },
-    {
-      title: "Wonderworks",
-      src: "/wonderworks_cover.png",
-      href: "/project/wonderworks"
-    },
-  ];
-
   const words = [
     {
-      text: "Passionate",
+      text: 'Passionate',
     },
     {
-      text: "&",
+      text: '&',
     },
     {
-      text: "Creative",
+      text: 'Creative',
     },
     {
-      text: "Concept",
-      className: "text-[#ff8cb8]",
+      text: 'Concept',
+      className: 'text-[#ff8cb8]',
     },
     {
-      text: "Developer",
-      className: "text-[#ff8cb8]",
+      text: 'Developer',
+      className: 'text-[#ff8cb8]',
     },
     {
-      text: "Student",
-
+      text: 'Student',
     },
   ];
 
   return (
     <>
-
       <section className={`${styles.gradient}`}>
-        <div className="flex flex-col text-center pt-40 p-20">
-          <h1 className="text-6xl mb-12">Kia Meggele</h1>
+        <div className="flex flex-col text-center pt-52">
+          <h1 className="text-6xl pb-5">Kia Meggele</h1>
           <TypewriterEffect words={words} />
         </div>
         <h2 className="text-center text-xl">Check out my projects</h2>
@@ -73,25 +48,11 @@ export default function Hero() {
           ></path>
         </svg>
       </section>
-      <div className="">
-
-        <FocusCards cards={cards} />;
-      </div>
-
-      <section>
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
-          <path
-            fill="#DFCCDB"
-            fillOpacity="1"
-            d="M0,128L60,144C120,160,240,192,360,186.7C480,181,600,139,720,133.3C840,128,960,160,1080,176C1200,192,1320,192,1380,192L1440,192L1440,320L1380,320C1320,320,1200,320,1080,320C960,320,840,320,720,320C600,320,480,320,360,320C240,320,120,320,60,320L0,320Z"
-          ></path>
-        </svg>
-      </section>
     </>
-
   );
 }
-{/* 
+{
+  /* 
       <section className="h-[700px] py-8 max-w-[1000px] mx-auto relative z-10 justify-center align-center grid grid-cols-[1fr,1.8fr,1fr,1fr] grid-rows-3 gap-4 drop-shadow-md">
 
         <div className="bg-white rounded-2xl flex justify-center items-center">logo</div>
@@ -149,5 +110,5 @@ export default function Hero() {
         </div>
 
       </section>
-      */}
-
+      */
+}
