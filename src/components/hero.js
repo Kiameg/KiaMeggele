@@ -5,6 +5,7 @@ import styles from '@/styles/gradient.module.css';
 import { TypewriterEffect, TypewriterEffectSmooth } from "./ui/typewriter-effect";
 import { FocusCards } from "./ui/focus-cards";
 
+
 export default function Hero() {
   const cards = [
     {
@@ -58,10 +59,10 @@ export default function Hero() {
 
       <section className={`${styles.gradient}`}>
         <div className="flex flex-col text-center pt-40 p-20">
-          <h1 className="text-5xl pb-5">Kia Meggele</h1>
+          <h1 className="text-6xl mb-12">Kia Meggele</h1>
           <TypewriterEffect words={words} />
-          <h2 className="text-center mt-20">Check out my projects</h2>
         </div>
+        <h2 className="text-center text-xl">Check out my projects</h2>
       </section>
       <section className="z-0">
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
