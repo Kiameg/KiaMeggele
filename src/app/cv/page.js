@@ -21,7 +21,6 @@ export default function CV() {
             />
           </div>
         </div>
-
         <section className="grid grid-cols-2 mt-10 gap-10 ">
           <h1 className="text-3xl">Education</h1>
           <h1 className="text-3xl pl-14">Experience</h1>
@@ -77,36 +76,38 @@ export default function CV() {
           </div>
         </section>
 
-        <div className="text-3xl text-center mt-20">
+        <div className="text-3xl mt-20 max-w-[400px] mb-10">
           <h1>Experience with</h1>
-          <Chip
-            classNames={{ base: "bg-gradient-to-br from-indigo-500 to-pink-500 border-small border-white/50 shadow-pink-500/30", content: "drop-shadow shadow-black text-white", }} variant="shadow">
-            UX Research
-          </Chip>
-          <Chip
-            classNames={{ base: "bg-gradient-to-br from-indigo-500 to-pink-500 border-small border-white/50 shadow-pink-500/30", content: "drop-shadow shadow-black text-white", }} variant="shadow">
-            Concept Development
-          </Chip>
-          <Chip
-            classNames={{ base: "bg-gradient-to-br from-indigo-500 to-pink-500 border-small border-white/50 shadow-pink-500/30", content: "drop-shadow shadow-black text-white", }} variant="shadow">
-            UI & UX Design
-          </Chip>
-          <Chip
-            classNames={{ base: "bg-gradient-to-br from-indigo-500 to-pink-500 border-small border-white/50 shadow-pink-500/30", content: "drop-shadow shadow-black text-white", }} variant="shadow">
-            Design Thinking
-          </Chip>
-          <Chip
-            classNames={{ base: "bg-gradient-to-br from-indigo-500 to-pink-500 border-small border-white/50 shadow-pink-500/30", content: "drop-shadow shadow-black text-white", }} variant="shadow">
-            Webdesign
-          </Chip>
-          <Chip
-            classNames={{ base: "bg-gradient-to-br from-indigo-500 to-pink-500 border-small border-white/50 shadow-pink-500/30", content: "drop-shadow shadow-black text-white", }} variant="shadow">
-            Marketing
-          </Chip>
-          <Chip
-            classNames={{ base: "bg-gradient-to-br from-indigo-500 to-pink-500 border-small border-white/50 shadow-pink-500/30", content: "drop-shadow shadow-black text-white", }} variant="shadow">
-            Frontend Development
-          </Chip>
+          <div className="">
+            <Chip
+              classNames={{ base: "bg-gradient-to-br from-indigo-500 to-pink-500 border-small border-white/50 shadow-pink-500/30", content: "drop-shadow shadow-black text-white", }} variant="shadow">
+              UX Research
+            </Chip>
+            <Chip
+              classNames={{ base: "bg-gradient-to-br from-indigo-500 to-pink-500 border-small border-white/50 shadow-pink-500/30", content: "drop-shadow shadow-black text-white", }} variant="shadow">
+              Concept Development
+            </Chip>
+            <Chip
+              classNames={{ base: "bg-gradient-to-br from-indigo-500 to-pink-500 border-small border-white/50 shadow-pink-500/30", content: "drop-shadow shadow-black text-white", }} variant="shadow">
+              UI & UX Design
+            </Chip>
+            <Chip
+              classNames={{ base: "bg-gradient-to-br from-indigo-500 to-pink-500 border-small border-white/50 shadow-pink-500/30", content: "drop-shadow shadow-black text-white", }} variant="shadow">
+              Design Thinking
+            </Chip>
+            <Chip
+              classNames={{ base: "bg-gradient-to-br from-indigo-500 to-pink-500 border-small border-white/50 shadow-pink-500/30", content: "drop-shadow shadow-black text-white", }} variant="shadow">
+              Webdesign
+            </Chip>
+            <Chip
+              classNames={{ base: "bg-gradient-to-br from-indigo-500 to-pink-500 border-small border-white/50 shadow-pink-500/30", content: "drop-shadow shadow-black text-white", }} variant="shadow">
+              Marketing
+            </Chip>
+            <Chip
+              classNames={{ base: "bg-gradient-to-br from-indigo-500 to-pink-500 border-small border-white/50 shadow-pink-500/30", content: "drop-shadow shadow-black text-white", }} variant="shadow">
+              Frontend Development
+            </Chip>
+          </div>
         </div>
 
       </section>
