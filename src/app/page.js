@@ -1,7 +1,26 @@
+'use client';
+
 import Hero from '@/components/hero';
 import { FocusCards } from '@/components/ui/focus-cards';
+import WaveBottom from '@/components/wave-bottom';
+import { motion } from 'framer-motion';
 
 export default function Home() {
+  const container = {
+    hidden: { opacity: 0 },
+    show: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.1,
+      },
+    },
+  };
+
+  const item = {
+    hidden: { opacity: 0, y: 20 },
+    show: { opacity: 1, y: 0 },
+  };
+
   const cards = [
     {
       title: 'jOUXli',
@@ -27,22 +46,20 @@ export default function Home() {
 
   return (
     <>
-      <section>
-        <Hero />
-        <div className="flex flex-col gap-4">
-          <h2 className="text-2xl text-center">Check out my projects</h2>
-          <FocusCards cards={cards} />
-        </div>
-      </section>
-      <section>
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
-          <path
-            fill="#DFCCDB"
-            fillOpacity="1"
-            d="M0,128L60,144C120,160,240,192,360,186.7C480,181,600,139,720,133.3C840,128,960,160,1080,176C1200,192,1320,192,1380,192L1440,192L1440,320L1380,320C1320,320,1200,320,1080,320C960,320,840,320,720,320C600,320,480,320,360,320C240,320,120,320,60,320L0,320Z"
-          ></path>
-        </svg>
-      </section>
+      <motion.section initial="hidden" animate="show" variants={container}>
+        <motion.div variants={item}>
+          <Hero />
+        </motion.div>
+        <motion.div variants={item} className="flex flex-col gap-4 px-4">
+          <motion.h2 variants={item} className="text-2xl text-center">
+            Check out my projects
+          </motion.h2>
+          <motion.div variants={item}>
+            <FocusCards cards={cards} />
+          </motion.div>
+        </motion.div>
+      </motion.section>
+      <WaveBottom />
     </>
   );
 }
