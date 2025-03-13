@@ -47,7 +47,7 @@ export default async function Projectview({ params }) {
     superkilen: {
       hero: {
         title: 'Superkilen',
-        image: '/Superkilen_comp.webp',
+        image: '/superkilen_comp.webp',
       },
       problem: {
         description:
