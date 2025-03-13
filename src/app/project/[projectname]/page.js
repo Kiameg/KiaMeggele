@@ -103,7 +103,7 @@ export default async function Projectview({ params }) {
     wonderfulcph: {
       hero: {
         title: 'Wonderful Copenhagen',
-        image: '/wonderfulcph_comp.webp',
+        image: '/wonderfulcph_comp.png',
       },
       problem: {
         description:
@@ -176,7 +176,7 @@ export default async function Projectview({ params }) {
 
           <div className="grid grid-cols-[0.5fr_2.5fr_0.5fr] md:grid-cols-[1fr_2fr_1fr] grid-rows-1 w-full items-center">
             <div className="w-1/2 h-0.5 bg-black"></div>
-            <div className="w-full relative aspect-video">
+            <div className="relative aspect-[17/10]">
               <Image
                 src={project.hero.image}
                 alt={project.hero.title}
