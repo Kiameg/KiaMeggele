@@ -22,11 +22,7 @@ export default function About() {
   };
 
   const passions = [
-    {
-      icon: <IconCode size={24} />,
-      title: 'Development',
-      description: 'Frontend development with a focus on creating beautiful, responsive interfaces',
-    },
+
     {
       icon: <IconPalette size={24} />,
       title: 'Design',
@@ -54,21 +50,20 @@ export default function About() {
       >
         <motion.div className="grid md:grid-cols-2 gap-10 items-start">
           <motion.div variants={item} className="order-2 md:order-1">
-            <h1 className="text-4xl md:text-5xl mb-8 bg-gradient-to-r from-indigo-500 to-pink-500 bg-clip-text text-transparent">
+            <h1 className="text-4xl md:text-5xl mb-8 bg-gradient-to-r from-[#ad87c7] to-[#fad3e2] bg-clip-text text-transparent">
               About me
             </h1>
 
             <motion.div variants={item} className="space-y-6 text-gray-600">
               <p className="leading-relaxed">
                 My name is Kia, and I am a passionate and creative woman dedicated to developing
-                digital solutions that make a real impact. I have a background in Multimedia Design
-                and Digital Concept Development, which has given me a strong foundation in mixing
-                creativity with strategy to create meaningful experiences.
+                solutions that make a real impact. I have a background in Multimedia Design
+                and Digital Concept Development, which has teached me that good concepts balances aesthetics, function and user experience.
               </p>
 
               <p className="leading-relaxed">
                 I currently work at WonderWorks, a digital agency where I focus on marketing, web
-                design, frontend development, and digital concepts.
+                design, frontend development, and concept development.
               </p>
 
               <p className="leading-relaxed">
@@ -86,7 +81,7 @@ export default function About() {
 
               <p className="leading-relaxed">
                 I am currently looking for work or an internship where I can further develop my
-                skills and contribute to creating digital solutions that are both visually
+                skills and contribute to creating solutions and concepts that are both visually
                 compelling and functionally impactful.
               </p>
             </motion.div>
@@ -103,12 +98,12 @@ export default function About() {
                   sizes="(max-width: 768px) 100vw, 256px"
                   priority
                 />
-                <div className="absolute inset-0 rounded-2xl bg-gradient-to-br from-indigo-500/20 to-pink-500/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                <div className="absolute inset-0 rounded-2xl bg-gradient-to-br from-[#ad87c7] to-[#fad3e2] opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
               </div>
             </div>
 
             <div className="hidden md:block">
-              <h2 className="text-2xl mb-6 bg-gradient-to-r from-indigo-500 to-pink-500 bg-clip-text text-transparent">
+              <h2 className="text-2xl mb-6 bg-gradient-to-r from-[#ad87c7] to-[#fad3e2] bg-clip-text text-transparent">
                 What Drives Me
               </h2>
               <div className="grid grid-cols-1 gap-4">
@@ -126,7 +121,7 @@ export default function About() {
                     className="group p-4 rounded-lg bg-white border border-gray-100 hover:border-pink-200 transition-all duration-300 hover:shadow-lg"
                   >
                     <div className="flex items-center gap-3">
-                      <div className="text-indigo-500 group-hover:text-pink-500 transition-colors duration-300">
+                      <div className="text-[#ad87c7] group-hover:text-pink-500 transition-colors duration-300">
                         {passion.icon}
                       </div>
                       <h3 className="text-lg font-medium text-gray-800">{passion.title}</h3>
@@ -140,7 +135,7 @@ export default function About() {
         </motion.div>
 
         <motion.div variants={item} className="mt-20 md:hidden">
-          <h2 className="text-2xl mb-6 bg-gradient-to-r from-indigo-500 to-pink-500 bg-clip-text text-transparent">
+          <h2 className="text-2xl mb-6 bg-gradient-to-r from-[#ad87c7] to-[#fad3e2] bg-clip-text text-transparent">
             What Drives Me
           </h2>
           <div className="grid grid-cols-1 gap-4">
@@ -158,7 +153,7 @@ export default function About() {
                 className="group p-4 rounded-lg bg-white border border-gray-100 hover:border-pink-200 transition-all duration-300 hover:shadow-lg"
               >
                 <div className="flex items-center gap-3">
-                  <div className="text-indigo-500 group-hover:text-pink-500 transition-colors duration-300">
+                  <div className="text-[#ad87c7] group-hover:text-pink-500 transition-colors duration-300">
                     {passion.icon}
                   </div>
                   <h3 className="text-lg font-medium text-gray-800">{passion.title}</h3>

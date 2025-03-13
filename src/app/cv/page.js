@@ -66,7 +66,7 @@ export default function CV() {
           <a
             href="/cv.pdf"
             download
-            className="inline-flex items-center gap-2 px-4 py-2 bg-gradient-to-br from-indigo-500 to-pink-500 text-white rounded-full hover:opacity-90 transition-opacity"
+            className="inline-flex items-center gap-2 px-4 py-2 bg-gradient-to-br from-[#ad87c7] to-[#fad3e2] text-white rounded-full hover:opacity-90 transition-opacity"
           >
             <IconDownload size={20} />
             Download CV
@@ -75,7 +75,7 @@ export default function CV() {
 
         <motion.section variants={item} className="grid md:grid-cols-2 mt-10 gap-24">
           <div>
-            <h2 className="text-3xl mb-8 bg-gradient-to-r from-indigo-500 to-pink-500 bg-clip-text text-transparent">
+            <h2 className="text-3xl mb-8 bg-gradient-to-r from-[#ad87c7] to-[#fad3e2] bg-clip-text text-transparent">
               Education
             </h2>
             <div className="space-y-8">
@@ -116,7 +116,7 @@ export default function CV() {
           </div>
 
           <div>
-            <h2 className="text-3xl mb-8 bg-gradient-to-r from-indigo-500 to-pink-500 bg-clip-text text-transparent">
+            <h2 className="text-3xl mb-8 bg-gradient-to-r from-[#ad87c7] to-[#fad3e2] bg-clip-text text-transparent">
               Experience
             </h2>
             <div className="space-y-8">
@@ -158,7 +158,7 @@ export default function CV() {
         </motion.section>
 
         <motion.div variants={item} className="mt-20 mb-20">
-          <h2 className="text-3xl mb-8 bg-gradient-to-r from-indigo-500 to-pink-500 bg-clip-text text-transparent">
+          <h2 className="text-3xl mb-8 bg-gradient-to-r from-[#ad87c7] to-[#fad3e2] bg-clip-text text-transparent">
             Skills & Expertise
           </h2>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-3">
@@ -172,7 +172,7 @@ export default function CV() {
               >
                 <Chip
                   classNames={{
-                    base: 'bg-gradient-to-br from-indigo-500 to-pink-500 border-small border-white/50 shadow-pink-500/30 w-full',
+                    base: 'bg-gradient-to-br from-[#ad87c7] to-[#fad3e2] border-small border-white/50 shadow-pink-500/30 w-full',
                     content: 'drop-shadow shadow-black text-white text-center',
                   }}
                   variant="shadow"
