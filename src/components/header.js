@@ -76,13 +76,13 @@ export default function Header() {
         <NavbarMenuToggle aria-label={isMenuOpen ? 'Close menu' : 'Open menu'} />
       </NavbarContent>
 
-      <NavbarMenu>
+      <NavbarMenu className="flex flex-col gap-4 pt-24 items-center">
         {menuItems.map((item) => (
           <NavbarMenuItem key={item.href}>
             <Link
               color="black"
               className={cn(
-                'w-full hover:text-[#ff8cb8] text-lg',
+                'w-full hover:text-[#ff8cb8] text-3xl',
                 isActive(item.href) && 'text-[#ff8cb8]'
               )}
               href={item.href}

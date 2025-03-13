@@ -1,26 +1,8 @@
-'use client';
-
 import Hero from '@/components/hero';
 import { FocusCards } from '@/components/ui/focus-cards';
 import WaveBottom from '@/components/wave-bottom';
-import { motion } from 'framer-motion';
 
 export default function Home() {
-  const container = {
-    hidden: { opacity: 0 },
-    show: {
-      opacity: 1,
-      transition: {
-        staggerChildren: 0.1,
-      },
-    },
-  };
-
-  const item = {
-    hidden: { opacity: 0, y: 20 },
-    show: { opacity: 1, y: 0 },
-  };
-
   const cards = [
     {
       title: 'jOUXli',
@@ -46,19 +28,17 @@ export default function Home() {
 
   return (
     <>
-      <motion.section initial="hidden" animate="show" variants={container}>
-        <motion.div variants={item}>
+      <section>
+        <div>
           <Hero />
-        </motion.div>
-        <motion.div variants={item} className="flex flex-col gap-4 px-4">
-          <motion.h2 variants={item} className="text-2xl text-center">
-            Check out my projects
-          </motion.h2>
-          <motion.div variants={item}>
+        </div>
+        <div className="flex flex-col gap-4 px-4">
+          <h2 className="text-2xl text-center">Check out my projects</h2>
+          <div>
             <FocusCards cards={cards} />
-          </motion.div>
-        </motion.div>
-      </motion.section>
+          </div>
+        </div>
+      </section>
       <WaveBottom />
     </>
   );
