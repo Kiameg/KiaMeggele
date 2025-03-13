@@ -17,7 +17,7 @@ const PROJECTMETADATA = {
   wonderfulcph: {
     title: 'Wonderful Copenhagen | Designing an Inclusive Tourism Experience',
     description:
-      'See how Kia Meggele developed a digital solution to enhance accessibility for tourists with disabilities in Copenhagen. A UX-focused project promoting inclusive travel experiences.',
+      'See how Kia Meggele developed a digital concept to enhance accessibility for tourists with disabilities in Copenhagen. A UX-focused project promoting inclusive travel experiences.',
   },
 };
 

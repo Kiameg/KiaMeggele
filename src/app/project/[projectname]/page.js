@@ -51,31 +51,32 @@ export default async function Projectview({ params }) {
       },
       problem: {
         description:
-          'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+          'The urban space Superkilen was established in 2012 as a project between the City of Copenhagen and Realdania. It was developed in collaboration with the architecture firm BIG, the artist group Superflex, and the landscape architects Topotek1. Divided into colors with sidewalks and bike lanes, the zones are called The Red Square, The Black Square, and The Green Park. The area is designed to create a connection between the collected objects in the park, which have been gathered based on requests from local residents and their stories. Superflex envisioned Superkilen as a space that would evolve with the times of todays digital society, seeking ways to bridge the gap between the physical and digital spaces.',
         description2:
-          'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+          'With these objectives in mind, I formulated the following problem area:',
         problemStatement:
-          'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+          'How can a digital platform improve the accessibility of information about Superkilens installations, activities, and events, and thereby strengthen the cultural interaction and community that the area is designed to support."',
         image: '/superkilen.webp',
       },
       research: {
         insights: [
-          'lorem ipsum dolor sit amet lorem ipsum dolor sit amet',
-          'lorem ipsum dolor sit amet lorem ipsum dolor sit amet',
-          'lorem ipsum dolor sit amet lorem ipsum dolor sit amet',
-          'lorem ipsum dolor sit amet lorem ipsum dolor sit amet',
+          'The communication of the spaces history is insufficient',
+          'There is no overall overview of activities and events at Superkilen',
+          'Superkilen is a unique space in the city and an expression of the local environment in Nørrebro',
+          'Locals in the area know the space, but not of the installations and the history behind it',
         ],
       },
       solution: {
-        description: `<p>lorem ipsum dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit amet</p>
+        description: `<p>After conducting thorough desk research and completing qualitative interviews with local citizens and experts, I identified key challenges regarding the accessibility and understanding of Superkilen's cultural installations and history.</p>
           <br />
-          <p>lorem ipsum dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit amet</p>
+          <p>With this in mind, I developed the concept of Superkilen Kulturnet – a digital cultural platform designed to address these challenges. The platform aims to make information about Superkilen's installations, activities, and events more accessible while promoting the cultural interaction and community the area is intended to support.</p>
           <br />
-          <p>We did this by: </p>
+          <p>My vision for the solution involves:</p>
           <ul>
-            <li>lorem ipsum dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit amet</li>
-            <li>lorem ipsum dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit amet</li>
-            <li>lorem ipsum dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit amet</li>
+            <li>Creating a digital platform that brings together all activities and events at Superkilen</li>
+            <li>Improving the communication and promotion of Superkilen’s history and cultural installations</li>
+            <li>Collaborating with the City of Copenhagen to reuse existing data for a resource-efficient and sustainable solution</li>
+            <li>A low-maintenance platform that allows locals to contribute without requiring significant resources</li>
           </ul>`,
         video: '/videos/superkilen2.mp4',
       },
@@ -126,7 +127,7 @@ export default async function Projectview({ params }) {
           <br />
           <p>A concept which is about the overall user journey. How we want to take the user by the hand and guide them from start to finish. Even though our focus was on individuals with hearing impairments, we believe that our solution could be used by several individuals with disabilities.</p>
           <br />
-          <p>We did this by: </p>
+          <p>Our vision for the solution involves: </p>
           <ul>
             <li>Creating a better and more intuitive UX experience overall</li>
             <li>A purchase flow that includes people with disabilities</li>

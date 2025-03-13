@@ -50,7 +50,7 @@ export default function Header() {
       <NavbarContent>
         <NavbarBrand>
           <Link href="/">
-            <AcmeLogo />
+            Kia Meggele
           </Link>
         </NavbarBrand>
       </NavbarContent>
