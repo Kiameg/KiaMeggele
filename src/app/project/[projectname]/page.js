@@ -52,8 +52,7 @@ export default async function Projectview({ params }) {
       problem: {
         description:
           'The urban space Superkilen was established in 2012 as a project between the City of Copenhagen and Realdania. It was developed in collaboration with the architecture firm BIG, the artist group Superflex, and the landscape architects Topotek1. Divided into colors with sidewalks and bike lanes, the zones are called The Red Square, The Black Square, and The Green Park. The area is designed to create a connection between the collected objects in the park, which have been gathered based on requests from local residents and their stories. Superflex envisioned Superkilen as a space that would evolve with the times of todays digital society, seeking ways to bridge the gap between the physical and digital spaces.',
-        description2:
-          'With these objectives in mind, I formulated the following problem area:',
+        description2: 'With these objectives in mind, I formulated the following problem area:',
         problemStatement:
           'How can a digital platform improve the accessibility of information about Superkilens installations, activities, and events, and thereby strengthen the cultural interaction and community that the area is designed to support?',
         image: '/superkilen.webp',
@@ -272,15 +271,15 @@ export default async function Projectview({ params }) {
                 </div>
               ) : project.problem.image ? (
                 // For projects with a single image
-                <div className="flex items-center">
-                  <div className="w-full relative aspect-video">
-                    <Image
-                      src={project.problem.image}
-                      alt={`${project.hero.title} Problem Illustration`}
-                      fill
-                      className="object-cover rounded-lg"
-                    />
-                  </div>
+
+                <div className="w-full h-full flex justify-center items-center">
+                  <Image
+                    src={project.problem.image}
+                    alt={`${project.hero.title} Problem Illustration`}
+                    height={350}
+                    width={500}
+                    className="object-cover rounded-lg"
+                  />
                 </div>
               ) : null}
             </div>
