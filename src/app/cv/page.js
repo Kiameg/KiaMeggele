@@ -11,7 +11,7 @@ export default function CV() {
     'Marketing',
     'Design Thinking',
     'Webdesign',
-    'Project Management',
+    'Branding',
     'UX Research',
     'Frontend Development',
     'UI & UX Design',
@@ -48,8 +48,7 @@ export default function CV() {
           <div>
             <h1 className="text-4xl md:text-5xl mb-4">Kia Meggele</h1>
             <p className="text-gray-600 max-w-md">
-              Passionate concept developer with a focus on creating meaningful digital experiences
-              through design thinking and technical implementation.
+              Passionate concept developer with a focus on creating solutions that don’t just look good but truly connect with people.
             </p>
           </div>
           <div className="w-40 h-40 overflow-hidden rounded-full drop-shadow-lg hover:scale-105 transition-transform">
