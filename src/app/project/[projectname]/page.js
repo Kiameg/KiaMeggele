@@ -9,37 +9,37 @@ export default async function Projectview({ params }) {
   const PROJECTSDATA = {
     jouxli: {
       hero: {
-        title: 'Jouxli',
+        title: 'jOUXli',
         image: '/jouxli_comp.webp',
       },
       problem: {
         description:
-          'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
-        description2:
-          'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+          'Jouxli is a jewelry company run by designer Lise Gammeltoft from her home in Charlottenlund. Lise creates unique jewelry pieces from elements she finds around the world. Her jewelry brings together stories from ancient times and modern Scandinavian design. By respecting the soul and origin of the objects, Lise creates a connection to the present by combining the antique parts of her jewelry with modern, sustainable, and contemporary elements. Most important to Lise, however, is the personal connection with her customers. In a society where we increasingly communicate online, she feels the need to share her unique story across platforms.',
+        description2: 'With these objectives in mind, we formulated the following problem area:',
         problemStatement:
-          'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+          'How do we build a consistent visual identity for the client across platforms while effectively communicating her story?',
         appImage1: '/jouxli_mobil.webp',
         appImage2: '/jouxli_mobil2.webp',
       },
       research: {
         insights: [
-          'lorem ipsum dolor sit amet lorem ipsum dolor sit amet',
-          'lorem ipsum dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit amet',
-          'lorem ipsum dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit amet',
-          'lorem ipsum dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit amet',
+          'Our respondents place significant value on collaborating with the maker and being involved in the creation of a piece of jewelry',
+          'The price is irrelevant to them as long as the jewelry is the right on',
+          'Many buy cheaper and trendy jewelry',
+          'jOUXli’s main costumer base had been those aged 60 and older',
         ],
       },
       solution: {
-        description: `<p>lorem ipsum dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit amet</p>
+        description: `<p>The purpose of our solution is to interpret Jouxli’s style and establish a cohesive visual identity through a multimedia approach. This has been achieved through a structured workflow that encompasses all aspects of Jouxli’s business, aiming to create a well-defined visual identity and effectively communicate her story.</p>
           <br />
-          <p>lorem ipsum dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit amet</p>
+          <p>A visit to Jouxli kickstarted the design process, and the third iteration of the prototype finally achieved the personal expression that was our original goal, as we had found great inspiration in Jouxli’s home.</p>
           <br />
           <p>We did this by: </p>
           <ul>
-            <li>lorem ipsum dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit amet</li>
-            <li>lorem ipsum dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit amet</li>
-            <li>lorem ipsum dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit amet</li>
+            <li>The implementation of the illustration on the prototype’s background created the unity and continuity across the pages, which also helps to clarify Jouxli’s brand identity</li>
+            <li>Overall pleasing, easy and minimalistic design</li>
+            <li>A lot of hours spent in JOUXli’s house, observing, interviewing and getting to know the owner</li>
+            <li>Besides interviewing, surveys and more, we made sure to user test every prototype before moving on</li>
           </ul>`,
         video: '/videos/jouxli_vid2.mp4',
       },
@@ -107,31 +107,31 @@ export default async function Projectview({ params }) {
       },
       problem: {
         description:
-          'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
-        description2:
-          'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+          'One of the leading organizations working to promote tourism in the Capital Region is Wonderful Copenhagen, a non-profit organization. As a central collaborative body for the regions tourism stakeholders, Wonderful Copenhagen focuses on marketing, events, and innovation to strengthen the regions position as an attractive destination for both tourists and international congresses. Additionally, they aim to further enhance this position through advanced digital tools and sustainable solutions, creating responsible and future-proof travel experiences.',
+        description2: 'With these objectives in mind, we formulated the following problem area:',
         problemStatement:
-          'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+          'How can we create a digital solution that enhances the tourist experience in Copenhagen for people with disabilities, with a particular focus on those with visual or hearing impairments?',
         image: '/wonderfulcph.png',
       },
       research: {
         insights: [
-          'lorem ipsum dolor sit amet lorem ipsum dolor sit amet',
-          'lorem ipsum dolor sit amet lorem ipsum dolor sit amet',
-          'lorem ipsum dolor sit amet lorem ipsum dolor sit amet',
-          'lorem ipsum dolor sit amet lorem ipsum dolor sit amet',
+          'Deaf and blind individuals experience significant challenges navigating urban spaces.',
+          'Initiatives such as the sunflower and badges create increased safety and awareness for both people with disabilities and their relatives.',
+          'Copenhagen can improve its accessibility for people with disabilities.',
+          'Deaf and blind individuals often rely on their tactile senses to orient themselves when navigating new surroundings.',
         ],
       },
       solution: {
-        description: `<p>lorem ipsum dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit amet</p>
+        description: `<p>As we finished our design sprint, we started developing the concept-  A city for all.</p>
           <br />
-          <p>lorem ipsum dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit amet</p>
+          <p>A concept which is about the overall user journey. How we want to take the user by the hand and guide them from start to finish. Even though our focus was on individuals with hearing impairments, we believe that our solution could be used by several individuals with disabilities.</p>
           <br />
           <p>We did this by: </p>
           <ul>
-            <li>lorem ipsum dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit amet</li>
-            <li>lorem ipsum dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit amet</li>
-            <li>lorem ipsum dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit amet</li>
+            <li>Creating a better and more intuitive UX experience overall</li>
+            <li>A purchase flow that includes people with disabilities</li>
+            <li>Creating a safe space at concerts where individuals can bring their relatives and friends</li>
+            <li>Free loan of a sensory vest to wear under the concert, providing to a greater experience</li>
           </ul>`,
         video: '/videos/wonderful_cph2.mp4',
       },
@@ -250,20 +250,20 @@ export default async function Projectview({ params }) {
               {project.problem.appImage1 && project.problem.appImage2 ? (
                 // For projects with two mobile app images
                 <div className="md:grid md:gap-8 md:justify-items-center md:justify-self-end flex justify-around">
-                  <div className="md:grid md:grid-cols-[150px_150px] md:gap-8 flex gap-4">
+                  <div className="md:grid md:grid-cols-[200px_200px] md:gap-8 flex">
                     <Image
                       src={project.problem.appImage1}
                       alt={`${project.hero.title} App Screenshot 1`}
-                      width={150}
-                      height={320}
-                      className="object-contain max-h-80"
+                      width={200}
+                      height={350}
+                      className="object-contain max-h-56 md:max-h-none"
                     />
                     <Image
                       src={project.problem.appImage2}
                       alt={`${project.hero.title} App Screenshot 2`}
-                      width={150}
-                      height={320}
-                      className="object-contain max-h-80 md:self-end"
+                      width={200}
+                      height={350}
+                      className="object-contain max-h-56 md:max-h-none md:self-end"
                     />
                   </div>
                 </div>

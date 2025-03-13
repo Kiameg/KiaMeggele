@@ -33,9 +33,8 @@ export default function Header() {
   const isActive = (path) => pathname === path;
 
   const menuItems = [
-    { href: '/cv', label: 'CV' },
     { href: '/about', label: 'About' },
-    { href: '/contact', label: 'Contact' },
+    { href: '/cv', label: 'CV' },
   ];
 
   const handleMenuItemClick = () => {
