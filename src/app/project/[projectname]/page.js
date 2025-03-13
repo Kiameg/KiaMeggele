@@ -152,6 +152,7 @@ export default async function Projectview({ params }) {
 
   return (
     <>
+      {/* Hero section */}
       {project.hero && (
         <section className={`${styles.gradient} flex flex-col items-center justify-center py-12`}>
           <div className="py-20">
@@ -173,7 +174,7 @@ export default async function Projectview({ params }) {
             </div>
           </div>
 
-          <div className="grid grid-cols-[1fr_3fr_1fr] grid-rows-1 w-full items-center">
+          <div className="grid grid-cols-[0.5fr_2.5fr_0.5fr] md:grid-cols-[1fr_2fr_1fr] grid-rows-1 w-full items-center">
             <div className="w-1/2 h-0.5 bg-black"></div>
             <div className="w-full relative aspect-video">
               <Image
@@ -231,13 +232,14 @@ export default async function Projectview({ params }) {
         </>
       )}
 
+      {/* Problem area section */}
       {project.problem && (
         <>
-          <div id="problem-area">
-            <WaveTop />
-          </div>
-
-          <section className="md:max-w-6xl md:mx-auto md:pb-24 md:pt-0 py-12 px-4">
+          <WaveTop />
+          <section
+            id="problem-area"
+            className="scroll-mt-12 md:scroll-mt-24 md:max-w-6xl md:mx-auto md:pb-24 md:pt-0 px-4 pt-12"
+          >
             <h2 className="text-4xl font-light pb-4">Problem area</h2>
             <div className="md:grid md:grid-cols-2 flex flex-col gap-8">
               <div className="space-y-6 border-t border-black pt-4">
@@ -285,11 +287,9 @@ export default async function Projectview({ params }) {
         </>
       )}
 
+      {/* Research section */}
       {project.research && (
-        <section
-          id="research"
-          className="md:max-w-6xl md:mx-auto md:pt-48 md:pb-0 pt-24 pb-12 px-4"
-        >
+        <section id="research" className="md:max-w-6xl md:mx-auto md:py-24 px-4 py-24">
           <h3 className="text-4xl font-light pb-4 text-center">Insight from research</h3>
           <div className="grid md:grid-cols-2 grid-cols-1 md:gap-y-32 gap-y-10 gap-x-4 items-center justify-items-center pt-8">
             {project.research.insights.map((insight, index) => (
@@ -302,44 +302,46 @@ export default async function Projectview({ params }) {
         </section>
       )}
 
-      {project === 'wonderworks' ? null : <WaveBottom />}
-
+      {/* Solution section */}
       {project.solution && (
-        <div className={`${styles.gradientReverse}`}>
-          <section id="solution" className="md:max-w-6xl md:mx-auto pb-48 md:pt-0 pt-12 px-4">
-            <h3 className="text-4xl font-light pb-4">Solution</h3>
-            <div className="md:grid md:grid-cols-2 md:gap-8 flex flex-col gap-12">
-              <div className={`${styles.solutionDescription}`}>
-                <div
-                  className="border-t border-black pt-4"
-                  dangerouslySetInnerHTML={{ __html: cleanHtml }}
-                />
-              </div>
-              <div className="w-full relative aspect-video self-center">
-                {project.solution.video ? (
-                  <video
-                    src={project.solution.video}
-                    controls
-                    className="w-full h-full rounded-lg"
-                    poster={project.hero.image}
-                    muted={true}
-                  />
-                ) : (
-                  project.solution.image && (
-                    <Image
-                      src={project.solution.image}
-                      alt={project.hero.title}
-                      fill
-                      className="object-cover rounded-lg"
-                      priority
-                    />
-                  )
-                )}
-              </div>
+        <section
+          id="solution"
+          className="scroll-mt-24 md:scroll-mt-0 md:max-w-6xl md:mx-auto md:pt-24 px-4 pb-12"
+        >
+          <h3 className="text-4xl font-light pb-4">Solution</h3>
+          <div className="md:grid md:grid-cols-2 md:gap-8 flex flex-col gap-12">
+            <div className={`${styles.solutionDescription}`}>
+              <div
+                className="border-t border-black pt-4"
+                dangerouslySetInnerHTML={{ __html: cleanHtml }}
+              />
             </div>
-          </section>
-        </div>
+            <div className="w-full relative aspect-video self-center">
+              {project.solution.video ? (
+                <video
+                  src={project.solution.video}
+                  controls
+                  className="w-full h-full rounded-lg"
+                  poster={project.hero.image}
+                  muted={true}
+                />
+              ) : (
+                project.solution.image && (
+                  <Image
+                    src={project.solution.image}
+                    alt={project.hero.title}
+                    fill
+                    className="object-cover rounded-lg"
+                    priority
+                  />
+                )
+              )}
+            </div>
+          </div>
+        </section>
       )}
+
+      {project === 'wonderworks' ? null : <WaveBottom />}
     </>
   );
 }
