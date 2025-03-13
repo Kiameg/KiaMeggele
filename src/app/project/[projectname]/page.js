@@ -55,14 +55,14 @@ export default async function Projectview({ params }) {
         description2:
           'With these objectives in mind, I formulated the following problem area:',
         problemStatement:
-          'How can a digital platform improve the accessibility of information about Superkilens installations, activities, and events, and thereby strengthen the cultural interaction and community that the area is designed to support."',
+          'How can a digital platform improve the accessibility of information about Superkilens installations, activities, and events, and thereby strengthen the cultural interaction and community that the area is designed to support?',
         image: '/superkilen.webp',
       },
       research: {
         insights: [
           'The communication of the spaces history is insufficient',
           'There is no overall overview of activities and events at Superkilen',
-          'Superkilen is a unique space in the city and an expression of the local environment in Nørrebro',
+          'Superkilen is a unique space in the city and a expression of the local environment in Nørrebro',
           'Locals in the area know the space, but not of the installations and the history behind it',
         ],
       },
