@@ -33,9 +33,8 @@ export default function Header() {
   const isActive = (path) => pathname === path;
 
   const menuItems = [
-    { href: '/cv', label: 'CV' },
     { href: '/about', label: 'About' },
-    { href: '/contact', label: 'Contact' },
+    { href: '/cv', label: 'CV' },
   ];
 
   const handleMenuItemClick = () => {
@@ -51,7 +50,7 @@ export default function Header() {
       <NavbarContent>
         <NavbarBrand>
           <Link href="/">
-            <AcmeLogo />
+            Kia Meggele
           </Link>
         </NavbarBrand>
       </NavbarContent>
@@ -77,13 +76,13 @@ export default function Header() {
         <NavbarMenuToggle aria-label={isMenuOpen ? 'Close menu' : 'Open menu'} />
       </NavbarContent>
 
-      <NavbarMenu>
+      <NavbarMenu className="flex flex-col gap-4 pt-24 items-center">
         {menuItems.map((item) => (
           <NavbarMenuItem key={item.href}>
             <Link
               color="black"
               className={cn(
-                'w-full hover:text-[#ff8cb8] text-lg',
+                'w-full hover:text-[#ff8cb8] text-3xl',
                 isActive(item.href) && 'text-[#ff8cb8]'
               )}
               href={item.href}
