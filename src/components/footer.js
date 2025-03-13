@@ -17,6 +17,12 @@ export default function Footer() {
           </a>
           <IconBrandLinkedin size={28} className="hover:text-[#ff8cb8] cursor-pointer" />
         </div>
+        <div className="text-[12px] text-black/70">
+          Created & developed by Kia Meggele &{' '}
+          <a className="underline" target="_blank" href="https://github.com/dkkmartin">
+            Martin Bruun
+          </a>
+        </div>
       </footer>
     </div>
   );
