@@ -58,7 +58,7 @@ export default function About() {
               <p className="leading-relaxed">
                 My name is Kia, and I am a passionate and creative woman dedicated to developing
                 solutions that make a real impact. I have a background in Multimedia Design
-                and Digital Concept Development, which has teached me that good concepts balances aesthetics, function and user experience.
+                and Digital Concept Development, which has teached me that great concepts harmonize aesthetics, functionality, and the user experience.
               </p>
 
               <p className="leading-relaxed">
