@@ -15,7 +15,7 @@ export default function Footer() {
           <a className="hover:text-[#ff8cb8]" href="mailto:kiameggele@gmail.com">
             <Mail size={28} />
           </a>
-          <IconBrandLinkedin size={28} className="hover:text-[#ff8cb8] cursor-pointer" />
+          <a href='www.linkedin.com/in/kia-meggele-042705208'><IconBrandLinkedin size={28} className="hover:text-[#ff8cb8] cursor-pointer" /></a>
         </div>
         <div className="text-[12px] text-black/70">
           Created & developed by Kia Meggele &{' '}
