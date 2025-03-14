@@ -64,7 +64,7 @@ export default function CV() {
 
         <motion.div variants={item} className="mt-12 flex justify-center md:block">
           <a
-            href="/cv.pdf"
+            href="/cv_eng.pdf"
             download
             className="inline-flex items-center gap-2 px-4 py-2 bg-gradient-to-br from-[#ad87c7] to-[#fad3e2] text-white rounded-full hover:opacity-90 transition-opacity"
           >
